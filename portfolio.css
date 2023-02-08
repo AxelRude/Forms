@@ -28,12 +28,11 @@
 
 /*I used sticky to make the menu follow when you scroll.*/
 .menu {
-  width: 100%;
-  height: 3rem;
+  padding: 0.2rem;
   background: var(--bg-clr-menu);
   position: sticky;
   top: 0;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 

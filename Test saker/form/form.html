@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="form.css" />
+
+    <title>Form-exempel</title>
+  </head>
+  <body>
+    <form>
+      <fieldset class="message-box">
+        <legend>Skicka meddleande</legend>
+        <label for="email">E-post:</label>
+        <input type="email" name="email" id="email" class="email" required />
+        <label for="name">Namn:</label>
+        <input type="text" name="text" id="name" class="name" />
+        <label for="message">Meddelande:</label>
+        <textarea
+          name="message"
+          id="message"
+          class="message"
+          cols="50"
+          rows="4"
+        ></textarea>
+        <input type="submit" id="send" class="send" name="send" />
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+/*I used grid to make the divs into rows and columns easier. I could also change the gap between the rows and columns.*/
+.container {
+    background-color: rgb(0, 0, 110);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.item {
+    background-color: rgb(0, 150, 0);
+    border: 1px solid;
+    border-color: black;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.fruit {
+    height: 9rem;
+    width: 12rem;
+    transition: 1s ease-in-out;
+}
+
+/*Scale is and easy way to make the picture bigger and border-radius to make the edges round. */
+@supports (scale: 1.5) {
+    .fruit:hover {
+        scale: 1.5;
+        border-radius: 20%;
+    }
+}

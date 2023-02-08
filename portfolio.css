@@ -1,0 +1,133 @@
+:root {
+  --bg-clr-header: #2093d8;
+  --bg-clr-menu: #20bbd8;
+  --bg-clr-background: #8fc17f;
+  --bg-clr-edges: #e1ebdf;
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.whole {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: static;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  flex-direction: column;
+}
+
+/*I used sticky to make the menu follow when you scroll.*/
+.menu {
+  width: 100%;
+  height: 3rem;
+  background: var(--bg-clr-menu);
+  position: sticky;
+  top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*I used display none to make sure the dropdown menu wont be visible when you aren't hovering over the menu.*/
+.links {
+  display: none;
+}
+
+.menu:hover .links {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  list-style: none;
+  background: var(--bg-clr-menu);
+  height: 100%;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.menu a {
+  font-size: 1rem;
+  color: #111;
+  padding: 0.8rem 1rem;
+}
+
+.menu-text {
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  color: #111;
+  padding: 1rem 1rem;
+  background-color: var(--bg-clr-menu);
+  margin: 0;
+}
+
+/*Make the links to other pages turn red when hovering over.*/
+.button:hover {
+  background-color: red;
+}
+
+.header {
+  background-color: var(--bg-clr-header);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.undertitel {
+  background: var(--bg-clr-background);
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.me {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.mepic {
+  height: 15%;
+  width: 15%;
+  border-radius: 20%;
+}
+
+.projects {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.projecttext {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.projectpicture {
+  height: 30rem;
+  width: 50rem;
+  border-radius: 5rem;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+}

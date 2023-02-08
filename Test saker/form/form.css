@@ -1,0 +1,45 @@
+/******************************
+ CSS Form
+*******************************/
+
+/* global styling */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: whitesmoke;
+}
+
+/* form styling */
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  resize: none;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 1rem;
+}
+
+.send {
+  margin-top: 1rem;
+  background-color: hotpink;
+  color: salmon;
+  padding: 0.5rem;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="history.css" />
+    <script src="history.js" defer></script>
+
+    <title>HTMLs Historia & DOM</title>
+  </head>
+
+  <body class="container">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-caption">HTMLs Historia & DOM</h1>
+      </div>
+    </header>
+    <nav class="primary-navigation">
+      <div class="primary-navigation-content">
+        <ul class="primary-navigation__links">
+          <li>
+            <a class="nav-link nav-link-history" href="#history"
+              >HTMLs historia</a
+            >
+            <figure class="images-menu-history">
+              <div class="images-menu-content-history">
+                <img
+                  class="inline-image-menu"
+                  src="/Images/Images history/Torget-se.png"
+                  alt="En bild på en hemsida som blev
+                framröstad som sveriges bästa hemsida 1997."
+                />
+                <img
+                  class="inline-image-menu"
+                  src="/Images/Images history/google2003.png"
+                  alt="En bild på hur google såg ut 2003"
+                />
+              </div>
+            </figure>
+          </li>
+          <li>
+            <a class="nav-link nav-link-W3CWHATWG" href="#W3C-WHATWG"
+              >W3C och WHATWG</a
+            >
+            <figure class="images-menu-W3C-WHATWG">
+              <div class="images-menu-content-W3C-WHATWG">
+                <img
+                  class="inline-image-menu"
+                  src="/images/Images history/HTML5.jpg"
+                  alt="html5 logo"
+                />
+                <img
+                  class="inline-image-menu"
+                  src="/Images/Images history/WHATWG-W3C.gif"
+                  alt="WHATWG and W3C logo"
+                />
+                <img
+                  class="inline-image-menu"
+                  src="/Images/Images history/company-logos.png"
+                  alt="Logos of Apple, Mozilla and Opera"
+                />
+              </div>
+            </figure>
+          </li>
+          <li>
+            <a class="nav-link nav-link-dom" href="#dom">DOM funktion</a>
+            <figure class="images-menu-dom">
+              <div class="images-menu-content-dom">
+                <img
+                  class="inline-image-menu"
+                  src="/images/Images history/dom.png"
+                  alt="document object model"
+                />
+              </div>
+            </figure>
+          </li>
+          <li>
+            <a class="nav-link nav-link-laws" href="#laws"
+              >Lagar och Bestämmelser</a
+            >
+            <figure class="images-menu-laws">
+              <div class="images-menu-content-laws">
+                <img
+                  class="inline-image-menu"
+                  src="/images/Images history/Upphovsrätten.png"
+                  alt="Upphovsrättslagen"
+                />
+                <img
+                  class="inline-image-menu"
+                  src="/images/Images history/GDPR.jpg"
+                  alt="GDPR"
+                />
+              </div>
+            </figure>
+          </li>
+          <li>
+            <a class="nav-link nav-link-contact" href="#contact">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main id="main-content" class="main-content">
+      <section id="history" class="main-content__paragraph">
+        <header class="second-header">
+          <h2>HTMLs Historia</h2>
+        </header>
+        <div class="content">
+          <p>
+            Under de första fem åren (1990-1995) gick HTML igenom ett antal
+            revisioner och fick ett antal tillägg, främst värd först på CERN och
+            sedan på IETF.
+          </p>
+          <p>
+            Runt den tid då HTMLs utveckling stoppades 1998 specificerades delar
+            av API:et för HTML utvecklat av webbläsarleverantörer och
+            publicerades under namnet DOM Level 1 (1998) och DOM Level 2 Core
+            och DOM Level 2 HTML (med start 2000 och som kulminerade 2003).
+            Dessa ansträngningar försvann sedan, med några DOM nivå
+            3-specifikationer publicerade 2004 men arbetsgruppen stängdes innan
+            alla nivå 3-utkast var färdiga.
+          </p>
+          <p>
+            Med skapandet av W3C ändrades HTMLs utvecklingsplats igen. Ett
+            första misslyckat försök att utöka HTML 1995, känd som HTML 3.0,
+            gjorde sedan plats för en mer praktisk metod känd som HTML 3.2, som
+            slutfördes 1997. HTML4 följde snabbt senare samma år.
+          </p>
+          <p>
+            2003 väckte publiceringen av XForms, en teknik som var positionerad
+            som nästa generation av webbformulär, ett förnyat intresse för att
+            utveckla HTML i sig, snarare än att hitta ersättare för det. Detta
+            intresse kom från insikten att XML:s distribution som webbteknik var
+            begränsad till helt nya teknologier (som RSS och senare Atom),
+            snarare än som en ersättning för befintliga distribuerade tekniker
+            (som HTML).
+          </p>
+          <img
+            class="inline-image-full"
+            src="/Images/Images history/Torget-se.png"
+            alt="En bild på en hemsida som blev framröstad som sveriges bästa hemsida 1997."
+          />
+          <img
+            class="inline-image-full"
+            src="/Images/Images history/google2003.png"
+            alt="En bild på hur google såg ut 2003"
+          />
+          <p>
+            Året därpå beslutade W3C-medlemskapet att sluta utveckla HTML och
+            istället börja arbeta på en XML-baserad motsvarighet, kallad XHTML.
+            Detta försök började med en omformulering av HTML4 i XML, känd som
+            XHTML 1.0, som inte lade till några nya funktioner förutom den nya
+            serialiseringen, och som slutfördes 2000. Efter XHTML 1.0 vändes
+            W3C:s fokus till att göra det lättare för andra arbetsgrupper att
+            utöka XHTML, under flaggan XHTML Modularization. Samtidigt med detta
+            arbetade W3C också på ett nytt språk som inte var kompatibelt med de
+            tidigare HTML- och XHTML-språken, kallar det XHTML2.
+          </p>
+          <p>
+            Ett “proof of concept” för att visa att det var möjligt att utöka
+            HTML4s formulär för att tillhandahålla många av de funktioner som
+            XForms 1.0 introducerade, utan att webbläsare skulle behöva
+            implementera renderingsmotorer som var inkompatibla med befintliga
+            HTML-webbsidor, var det första resultatet av detta förnyade
+            intresse. I detta tidiga skede, medan utkastet redan var allmänt
+            tillgängligt och input redan begärdes från alla källor, var
+            specifikationen endast under Opera Softwares upphovsrätt.
+          </p>
+        </div>
+      </section>
+      <section id="W3C-WHATWG" class="main-content__paragraph">
+        <header class="second-header">
+          <h2>W3c och WHATWG:</h2>
+        </header>
+        <div class="content">
+          <p>
+            Idén att HTMLs utveckling skulle återupptas testades vid en
+            W3C-workshop 2004, där några av principerna som ligger till grund
+            för HTML5-arbetet (beskrivs nedan), såväl som det tidigare nämnda
+            tidiga förslaget som täcker bara formulärrelaterade funktioner,
+            presenterades för W3C gemensamt av Mozilla och Opera. Förslaget
+            avslogs med motiveringen att förslaget stred mot den tidigare valda
+            riktningen för webbens utveckling; W3C:s personal och medlemmar
+            röstade för att fortsätta utveckla XML-baserade ersättningar
+            istället.
+          </p>
+          <img
+            class="inline-image-small"
+            src="/images/Images history/HTML5.jpg"
+            alt="html5 logo"
+          />
+          <p>
+            Kort därefter tillkännagav Apple, Mozilla och Opera tillsammans sin
+            avsikt att fortsätta arbeta med insatsen under paraplyet av en ny
+            plats kallad WHATWG. En offentlig e-postlista skapades och utkastet
+            flyttades till WHATWG-webbplatsen. Upphovsrätten ändrades därefter
+            för att ägas gemensamt av alla tre leverantörerna och för att
+            tillåta återanvändning av specifikationen.
+          </p>
+          <img
+            class="inline-image-full"
+            src="/Images/Images history/WHATWG-W3C.gif"
+            alt="WHATWG and W3C logo"
+          />
+          <p>
+            WHATWG baserades på flera kärnprinciper, särskilt att tekniker måste
+            vara bakåtkompatibla, att specifikationer och implementeringar måste
+            matcha även om detta innebär att man ändrar specifikationen snarare
+            än implementeringarna, och att specifikationer måste vara
+            tillräckligt detaljerade för att implementeringar kan uppnås.
+            fullständig driftskompatibilitet utan att omvända varandra.
+          </p>
+          <p>
+            Under 2019 undertecknade WHATWG och W3C ett avtal om att samarbeta
+            om en enda version av HTML framöver: detta dokument.
+          </p>
+          <p>
+            Särskilt det senare kravet krävde att omfattningen av
+            HTML5-specifikationen inkluderar vad som tidigare hade specificerats
+            i tre separata dokument: HTML4, XHTML1 och DOM2 HTML. Det innebar
+            också att inkludera betydligt fler detaljer än vad som tidigare
+            ansetts vara normen.
+          </p>
+          <p>
+            Under ett antal år arbetade sedan båda grupperna tillsammans. 2011
+            kom dock grupperna till slutsatsen att de hade olika mål: W3C ville
+            publicera en "färdig" version av "HTML5", medan WHATWG ville
+            fortsätta arbeta med en Living Standard för HTML, med kontinuerligt
+            underhåll av specifikationen istället för att frysa den i ett
+            tillstånd med kända problem och lägga till nya funktioner efter
+            behov för att utveckla plattformen.
+          </p>
+          <p>
+            2006 indikerade W3C ett intresse av att trots allt delta i
+            utvecklingen av HTML5, och 2007 bildade W3C en arbetsgrupp för att
+            arbeta med WHATWG om utvecklingen av HTML5-specifikationen. Apple,
+            Mozilla och Opera tillät W3C att publicera specifikationen under
+            W3C-upphovsrätten, samtidigt som de behöll en version med den mindre
+            restriktiva licensen på WHATWG-webbplatsen.
+          </p>
+          <img
+            class="inline-image-full"
+            src="/Images/Images history/company-logos.png"
+            alt="Logos of Apple, Mozilla and Opera"
+          />
+        </div>
+      </section>
+      <section id="dom" class="main-content__paragraph">
+        <header class="second-header">
+          <h2>Hur fungerar webben och vad är DOM?</h2>
+        </header>
+        <div class="content">
+          <p>
+            DOM står för "Document Object Model. Det fungerar så att när en
+            klient (en dator) gör något skapar den en DOM och skickar den till
+            en webbserver.
+          </p>
+          <p>
+            I dokumentet som skickas står det vad klienten vill ha så att
+            servern vet vad den ska skicka tillbaka. Hovra över/klicka på
+            bilderna för att se hur det skickas.
+          </p>
+        </div>
+        <div id="dom-image" class="dom-image">
+          <img
+            class="inline-image-full"
+            src="/images/Images history/klient.png"
+            alt="klient"
+          />
+          <p id="message" class="message">Message --></p>
+          <p id="resource" class="resource">&lt;-- Resources</p>
+          <img
+            class="inline-image-full"
+            src="/Images/Images history/server.png"
+            alt="server"
+          />
+        </div>
+      </section>
+      <section id="laws" class="main-content__paragraph">
+        <header class="second-header">
+          <h2>Lagar och bestämmelser om digital information</h2>
+        </header>
+        <div class="content">
+          <p>
+            Upphovsrätt: Denna lag bestämmer hur man kan använda material på
+            nätet. Saker som bilder, kartor och andra illustrationer får man
+            inte använda hur som helst, man måste tillstånd från
+            rättighetshavaren. Det är person som har skapat sakerna och därför
+            äger de.
+          </p>
+          <p>
+            Lagen om tillgänglighet till digital offentlig service: Denna lag
+            bestämmer att information och tjänster som en offentlig aktör
+            erbjuder via sin hemsida måste vara tillgänglig. informationen och
+            tjänsterna måste uppfylla följande krav: Den ska vara möjlig att
+            uppfatta, hanterbar, begriplig och robust. Lagen innebär även att
+            man måste ha en redogörelse för hur man uppfyller dessa krav.
+          </p>
+          <img
+            class="inline-image-small"
+            src="/images/Images history/Upphovsrätten.png"
+            alt="Upphovsrättslagens symbol"
+          />
+          <p>
+            Dataskyddsförordningen (GDPR): Denna lag bestämmer hur man ska
+            hantera personuppgifter på webbplatser. Denna lag hette tidigare
+            personuppgiftslagen men 2018 bestämde EU att den skulle heta
+            Dataskyddsförordningen eller GDPR. Med bytet blev kraven på hur man
+            hanterar personuppgifter hårdare och hur rutinerna och processerna
+            som hanterar det ser ut.
+          </p>
+          <p>
+            Diskrimineringslagen: Denna lag har till ändamål att motverka
+            diskriminering och på andra sätt främja lika rättigheter och
+            möjligheter oavsett kön, könsöverskridande identitet eller uttryck,
+            etnisk tillhörighet, religion eller annan trosuppfattning,
+            funktionsnedsättning, sexuell läggning eller ålder.
+          </p>
+          <img
+            class="inline-image-small"
+            src="/images/Images history/GDPR.jpg"
+            alt="GDPR symbolen"
+          />
+        </div>
+      </section>
+      <section id="contact" class="main-content__paragraph">
+        <section class="second-header">
+          <h2>Kontakta mig</h2>
+        </section>
+        <div class="contact">
+          <form
+            action="https://formsubmit.co/axelrude2005@gmail.com"
+            method="POST"
+          >
+            <fieldset class="message-box">
+              <input
+                type="hidden"
+                name="_subject"
+                value="Email from history page."
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <label for="email">E-post:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email-Adress"
+                id="email"
+                class="email"
+                required
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="http://127.0.0.1:5500/Historia/thanks.html"
+              />
+              <label for="name">Namn:</label>
+              <input
+                type="text"
+                name="text"
+                placeholder="Name"
+                id="name"
+                class="name"
+              />
+              <label for="message">Meddelande:</label>
+              <textarea
+                name="message"
+                id="eamil-content"
+                class="email-content"
+                cols="50"
+                rows="4"
+              ></textarea>
+            </fieldset>
+            <input type="submit" id="send" class="send" name="send" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav>
+        <ul class="footer-navigation">
+          <li><a class="nav-link" href="#">Tillbaka till toppen</a></li>
+          <li>
+            <a class="nav-link" href="/portfolio.html" target="_blank"
+              >Visa portfolio</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="mailto:axel.rude@elev.ga.ntig.se"
+              >Kontakta mig</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h4 class="footer-text">
+          Copyright &copy; 2023 - Axel Rude / A&M-Klubben
+        </h4>
+      </section>
+    </footer>
+  </body>
+</html>

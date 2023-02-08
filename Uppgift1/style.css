@@ -1,0 +1,22 @@
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    float: left;
+    margin: 25px;
+}
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(88, 130, 255);
+}
+h2 {
+    color: rgb(132, 73, 31);
+}
+.Undertitel {
+    font-size: 30px;
+    font-weight: bold;
+}
+.information {
+    font-weight: bold;
+}

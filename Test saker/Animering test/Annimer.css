@@ -1,0 +1,54 @@
+.parent {
+    padding: 25px;
+    background-color: #ff00d9;
+    position: relative;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.child {
+    font-size: 50px;
+}
+
+.child-one {
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+
+}
+
+.child-one:hover {
+    animation: rotate 5s;
+}
+
+
+@keyframes rotate {
+    0% {
+        rotate: 1 1 0 0deg;
+    }
+    33% {
+        background-color: aquamarine;
+    }
+    67% {
+        background-color: yellow;
+    }
+    100% {
+        rotate: 1 1 0 360deg;
+    }
+}
+
+.child-two {
+    padding: 25px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    transition: 2.5s;
+}
+
+.child-two:hover {
+    scale: 1.45;
+}

@@ -1,0 +1,613 @@
+/******************************
+ CSS history
+*******************************/
+
+/* global styling */
+
+:root {
+  --fg-clr-text: #3a3a3a;
+  --fg-clr-link: rgb(7, 78, 118);
+  --fg-clr-accent: rgb(0, 166, 255);
+  --fg-clr-white: #fff;
+  --fg-clr-header-text: #3d0f03;
+
+  --bg-clr-header: #2093d8;
+  --bg-clr-menu: #20bbd8;
+  --bg-clr-background: #8fc17f;
+  --bg-clr-edges: #e1ebdf;
+  --bg-clr-shadow: #6c8368;
+
+  --img-width-small: 12rem;
+  --img-width-medium: 25rem;
+  --img-width-full: 100%;
+  --img-width-menu: 9rem;
+  --img-height-menu: 5rem;
+
+  --img-width-small-phone: 6rem;
+  --img-width-medium-phone: 10rem;
+  --img-width-full-phone: 100%;
+
+  --padding-tight: 0.6rem;
+  --padding-normal: 6rem;
+
+  --ft-weight-700: 700;
+  --ft-size-header: 2.9rem;
+
+  --ft-size-animation-start: 1rem;
+  --ft-size-animation-stop: 0.1rem;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+}
+
+/*Scroll-padding-top is used when clicking on the links in the meny to navigate throug the website. It make sit possible to see the second header and not have it covered by the menu.*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*Background of header*/
+.header {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background: var(--bg-clr-header);
+}
+
+/*Makes the text in the header sit a little bit in and not all the way out to the edges.*/
+.header-content {
+  background: var(--bg-clr-header);
+  width: 60%;
+  height: var(--padding-normal);
+  margin-inline: auto;
+}
+
+/*menu-styling*/
+
+/*background menu*/
+.primary-navigation {
+  width: 100%;
+  height: 2rem;
+  background: var(--bg-clr-menu);
+  position: sticky;
+  top: 0;
+}
+
+/*Makes the text in the menu do the same thing as the header.*/
+.primary-navigation-content {
+  width: 50%;
+  height: 2rem;
+  margin-inline: auto;
+  background: var(--bg-clr-menu);
+}
+
+/*Links in the menu, centers them and spreads them out evenly.*/
+.primary-navigation__links {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+/* Images when hovering on "history" in the menu, hidden by default.*/
+.images-menu-history {
+  width: 100vw;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  position: sticky;
+  left: 0;
+  display: none;
+}
+
+/*"History" images, this centers them and spread them out evenly.*/
+.images-menu-content-history {
+  width: 40%;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  margin-inline: auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+/*Hovering the link makes the images appear.*/
+.nav-link-history:hover + .images-menu-history,
+.nav-link-history:focus + .images-menu-history {
+  display: block;
+  position: absolute;
+}
+
+/*Images when hovering on "W3C-WHATWG" in the menu, hidden by default.*/
+.images-menu-W3C-WHATWG {
+  width: 100vw;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  position: sticky;
+  left: 0;
+  display: none;
+}
+
+/*"W3C-WHATWG" images, this centers them and spread them out evenly.*/
+.images-menu-content-W3C-WHATWG {
+  width: 40%;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  margin-inline: auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+/*Hovering the link makes the images appear.*/
+.nav-link-W3CWHATWG:hover + .images-menu-W3C-WHATWG,
+.nav-link-W3CWHATWG:focus + .images-menu-W3C-WHATWG {
+  display: block;
+  position: absolute;
+}
+
+/*Images when hovering on "DOM" in the menu, hidden by default.*/
+.images-menu-dom {
+  width: 100vw;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  position: sticky;
+  left: 0;
+  display: none;
+}
+
+/*"DOM" images, this centers them and spread them out evenly.*/
+.images-menu-content-dom {
+  width: 40%;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  margin-inline: auto;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+/*Hovering the link makes the images appear.*/
+.nav-link-dom:hover + .images-menu-dom,
+.nav-link-dom:focus + .images-menu-dom {
+  display: block;
+  position: absolute;
+}
+
+/*Images when hovering on "Lagar och Bestämmelser" in the menu, hidden by default.*/
+.images-menu-laws {
+  width: 100vw;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  position: sticky;
+  left: 0;
+  display: none;
+}
+
+/*"Lagar och Bestämmelser" images, this centers them and spread them out evenly.*/
+.images-menu-content-laws {
+  width: 40%;
+  height: 5rem;
+  background: var(--bg-clr-menu);
+  margin-inline: auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+/*Hovering the link makes the images appear.*/
+.nav-link-laws:hover + .images-menu-laws,
+.nav-link-laws:focus + .images-menu-laws {
+  display: block;
+  position: absolute;
+}
+
+/*Main content*/
+
+body {
+  background: var(--bg-clr-edges);
+}
+
+/*Center the content and not have it go all the way to the edges.*/
+.main-content {
+  width: 60%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.second-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content__paragraph {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background: var(--bg-clr-background);
+  padding: 4%;
+  box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.footer {
+  background: var(--bg-clr-menu);
+}
+
+/* image styling */
+
+/*Decides the size of the images, defined in :root.*/
+.inline-image-small {
+  width: var(--img-width-small);
+  object-fit: cover;
+}
+
+.inline-image-medium {
+  width: var(--img-width-medium);
+  object-fit: cover;
+}
+
+.inline-image-full {
+  width: var(--img-width-full);
+  object-fit: cover;
+}
+
+.inline-image-menu {
+  width: var(--img-width-menu);
+  height: var(--img-height-menu);
+  object-fit: cover;
+}
+
+.dom-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*Animation*/
+
+.message {
+  font-size: var(--ft-size-animation-start);
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 6vw;
+  /*First it executes the translate command the the scale.*/
+  transition-property: translate, scale;
+  /*The first command have a duration of 1 second and the second 0.5 seconds.*/
+  transition-duration: 1s, 0.5s;
+  /*The first command doesnt have a delay before starting while the other waits for 1.2 seconds.*/
+  transition-delay: 0s, 1.2s;
+  /*The animation is linear, doesnt speed up during the animation.*/
+  transition-timing-function: linear;
+}
+
+.resource {
+  font-size: var(--ft-size-animation-stop);
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 11vw;
+  left: 11vw;
+  /*First it executes the scale command the the translate.*/
+  transition-property: scale, translate;
+  /*The first command have a duration of 0.5 seconds and the second 1 seconds.*/
+  transition-duration: 0.5s, 1s;
+  /*The first command has a delay of 1.7 seconds before starting while the other waits for 2.5 seconds. The first animation is also included*/
+  transition-delay: 1.7s, 2.5s;
+  /*The animation is linear, doesnt speed up during the animation.*/
+  transition-timing-function: linear;
+}
+
+/*Performs animation of "message"-text*/
+@supports ((translate: 23.5vw) and (scale: 0.1)) {
+  .dom-image:hover .message,
+  .dom-image-hover .message {
+    translate: 23.5vw;
+    scale: 0.1;
+  }
+}
+
+/*Returns the animation of "message" to the original position*/
+@supports ((translate: 0) and (scale: 1)) {
+  .dom-image-hover2 .message {
+    translate: 0;
+    scale: 1;
+  }
+}
+
+/*Performs animation of "resource"-text*/
+@supports ((scale: 10) and (translate: -23.5vw)) {
+  .dom-image:hover .resource,
+  .dom-image-hover .resource {
+    scale: 10;
+    translate: -23.5vw;
+  }
+}
+
+/*Returns the animation of "resource" to the original position*/
+@supports ((scale: 1) and (translate: 0)) {
+  .dom-image-hover2 .resource {
+    scale: 1;
+    translate: 0;
+  }
+}
+
+/* text styling */
+
+.header-caption {
+  font-weight: var(--ft-weight-700);
+  font-size: var(--ft-size-header);
+  color: var(--fg-clr-header-text);
+}
+
+p {
+  color: var(--fg-clr-text);
+}
+
+.footer-text {
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* link styling */
+
+a {
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--fg-clr-link);
+}
+
+.nav-link:visited {
+  color: var(--fg-clr-link);
+}
+
+/*skip-link (Skip to main content)*/
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  text-align: center;
+  height: 1.9rem;
+  background-color: var(--bg-clr-header);
+  translate: 0 -100%;
+  transition: translate 150ms ease-in-out;
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+  border: 0.05rem solid black;
+}
+
+.skip-link:focus {
+  translate: 0;
+  color: var(--fg-clr-header-text);
+}
+
+/*Underline links whil hovering*/
+.nav-link:hover {
+  text-decoration: Underline;
+  color: var(--fg-clr-accent);
+}
+
+/* form styling */
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  resize: none;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.message-box {
+  display: grid;
+  grid-template-columns: 20% 70%;
+  border: none;
+}
+
+.send {
+  margin-top: 1rem;
+  background-color: rgb(135, 108, 72);
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/*Responsitivity*/
+
+@media (max-width: 450px) {
+  /*Most cellphones have a screen width up to 450px*/
+  /*Makes the header and it's content a bit smaller and go all way to the edges.*/
+  .header {
+    padding: var(--padding-tight);
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+  .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .header-caption {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  body {
+    background: var(--bg-clr-edges);
+  }
+  .content {
+    grid-template-columns: 1fr;
+    padding: 0;
+    row-gap: 1.5rem;
+  }
+  .main-content {
+    width: 90%;
+    padding: 0;
+  }
+  .second-header {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  /*Changes the dimensions of the images.*/
+  .inline-image-small {
+    width: var(--img-width-small-phone);
+  }
+  .inline-image-medium {
+    width: var(--img-width-medium-phone);
+  }
+  .inline-image-full {
+    width: var(--img-width-full-phone);
+  }
+  .message {
+    font-size: 0.7rem;
+  }
+  .resource {
+    font-size: 0.07rem;
+    top: 15vw;
+    left: 10vw;
+  }
+
+  /*Changes the dimensions of the menu.*/
+  .primary-navigation {
+    height: auto;
+  }
+  .primary-navigation-content {
+    width: 90%;
+    height: auto;
+  }
+  .primary-navigation__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+  }
+  /*Removes the ability to see pictures when klicking on a link in meny, it is of no use on cellphones.*/
+  .nav-link-history:hover + .images-menu-history,
+  .nav-link-history:focus + .images-menu-history {
+    display: none;
+  }
+  .nav-link-W3CWHATWG:hover + .images-menu-W3C-WHATWG,
+  .nav-link-W3CWHATWG:focus + .images-menu-W3C-WHATWG {
+    display: none;
+  }
+  .nav-link-dom:hover + .images-menu-dom,
+  .nav-link-dom:focus + .images-menu-dom {
+    display: none;
+  }
+  .nav-link-laws:hover + .images-menu-laws,
+  .nav-link-laws:focus + .images-menu-laws {
+    display: none;
+  }
+
+  .message-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: none;
+  }
+  input,
+  button,
+  textarea {
+    width: 100%;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 1280px) {
+  /*Most tabels has a screen width up to 1280px and are bigger than cellphones.*/
+  .header {
+    padding: var(--padding-tight);
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .header-caption {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  body {
+    background: var(--bg-clr-edges);
+  }
+  .content {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    row-gap: 1.5rem;
+  }
+  .main-content {
+    width: 80%;
+    padding: 1rem;
+  }
+  .second-header {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .inline-image-small {
+    width: var(--img-width-small-phone);
+  }
+  .inline-image-medium {
+    width: var(--img-width-medium-phone);
+  }
+  .inline-image-full {
+    width: var(--img-width-full-phone);
+  }
+  .resource {
+    top: 15vw;
+    left: 10vw;
+  }
+
+  .primary-navigation {
+    height: auto;
+  }
+  .primary-navigation-content {
+    width: 90%;
+    height: auto;
+  }
+
+  .message-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: none;
+  }
+  input,
+  button,
+  textarea {
+    width: 100%;
+  }
+}

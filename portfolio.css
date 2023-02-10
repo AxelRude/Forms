@@ -3,6 +3,7 @@
   --bg-clr-menu: #20bbd8;
   --bg-clr-background: #8fc17f;
   --bg-clr-edges: #e1ebdf;
+  --bg-clr-shadow: #6c8368;
 }
 
 * {
@@ -10,20 +11,68 @@
   margin: 0;
 }
 
-.whole {
-  display: flex;
-  flex-direction: column;
+body {
   height: 100vh;
-  position: static;
 }
 
-.flex {
+.main-content {
+  background: var(--bg-clr-edges);
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.me {
+  background: var(--bg-clr-background);
+  width: 80%;
+  margin-left: 10%;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
+  margin-bottom: 3rem;
 }
 
-.center {
+.metext {
+  display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.mepic {
+  height: 30%;
+  width: 30%;
+  border-radius: 20%;
+}
+
+.earlier-projects {
+  background: var(--bg-clr-background);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.part {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  background: var(--bg-clr-background);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin: 2rem;
+  align-items: center;
 }
 
 /*I used sticky to make the menu follow when you scroll.*/
@@ -82,26 +131,7 @@
   font-size: 3rem;
 }
 
-.undertitel {
-  background: var(--bg-clr-background);
-  flex: 1 1 auto;
-  flex-direction: column;
-}
-
-.me {
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
-  font-weight: bold;
-  margin-left: 2%;
-}
-
-.mepic {
-  height: 15%;
-  width: 15%;
-  border-radius: 20%;
-}
-
-.projects {
+.second-header {
   color: rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: bold;
@@ -121,10 +151,10 @@
 }
 
 .projectpicture {
-  height: 30rem;
-  width: 50rem;
-  border-radius: 5rem;
-  margin: 1rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  border: solid 0.5rem #111;
 }
 
 a {

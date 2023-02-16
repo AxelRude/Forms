@@ -4,6 +4,7 @@
   --bg-clr-background: #8fc17f;
   --bg-clr-edges: #e1ebdf;
   --bg-clr-shadow: #6c8368;
+  --fg-clr-link: rgb(7, 78, 118);
 }
 
 * {
@@ -13,11 +14,11 @@
 
 body {
   height: 100vh;
+  background: var(--bg-clr-edges);
 }
 
 .main-content {
   background: var(--bg-clr-edges);
-  flex: 1 1 auto;
   flex-direction: column;
 }
 
@@ -31,6 +32,7 @@ body {
   align-items: center;
   box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
   margin-bottom: 3rem;
+  margin-top: 1.5rem;
 }
 
 .metext {
@@ -54,6 +56,8 @@ body {
   flex-direction: column;
   width: 80%;
   margin-left: 10%;
+  box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
+  margin-bottom: 1.5rem;
 }
 
 .part {
@@ -68,11 +72,17 @@ body {
   box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
 }
 
-.projects {
+.project-part {
   display: grid;
-  grid-template-columns: 50% auto;
+  grid-template-columns: 65% auto;
   margin: 2rem;
   align-items: center;
+}
+
+.project-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /*I used sticky to make the menu follow when you scroll.*/
@@ -85,18 +95,14 @@ body {
   font-weight: bold;
 }
 
-/*I used display none to make sure the dropdown menu wont be visible when you aren't hovering over the menu.*/
 .links {
-  display: none;
-}
-
-.menu:hover .links {
   display: flex;
   flex: 1;
   justify-content: space-evenly;
   list-style: none;
   background: var(--bg-clr-menu);
   height: 100%;
+  padding: 1rem;
 }
 
 .links a:hover {
@@ -107,16 +113,6 @@ body {
   font-size: 1rem;
   color: #111;
   padding: 0.8rem 1rem;
-}
-
-.menu-text {
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  color: #111;
-  padding: 1rem 1rem;
-  background-color: var(--bg-clr-menu);
-  margin: 0;
 }
 
 /*Make the links to other pages turn red when hovering over.*/
@@ -138,10 +134,16 @@ body {
   margin-left: 2%;
 }
 
+.projectlink,
 .projecttext {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.description-link:hover {
+  text-decoration: underline;
 }
 
 .text {
@@ -154,9 +156,26 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 10%;
-  border: solid 0.5rem #111;
 }
 
 a {
   text-decoration: none;
+}
+
+.footer {
+  background: var(--bg-clr-menu);
+}
+
+.footer-text {
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.nav-link {
+  color: var(--fg-clr-link);
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }

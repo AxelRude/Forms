@@ -10,6 +10,11 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  scroll-padding-top: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -201,10 +206,12 @@ a {
 
 /*Responsitivity*/
 @media (max-width: 1280px) {
-  /*Meny styling*/
+  /*Menu styling*/
   .menu {
     width: 15%;
-    padding: 0;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: fixed;
   }
 
   .links {
@@ -236,7 +243,6 @@ a {
   .me {
     width: 75%;
     margin-left: 20%;
-    margin-top: 0;
   }
 
   .header-caption {

@@ -32,3 +32,6 @@ html {
 .box:hover:not(:has(img)) {
   scale: 1.5;
 }
+.box:hover:has(img) {
+  rotate: 180deg;
+}

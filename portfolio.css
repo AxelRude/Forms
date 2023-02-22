@@ -22,6 +22,7 @@ body {
   flex-direction: column;
 }
 
+/*Styling of first paragraph*/
 .me {
   background: var(--bg-clr-background);
   width: 80%;
@@ -49,6 +50,7 @@ body {
   border-radius: 20%;
 }
 
+/*Main paragraphs*/
 .earlier-projects {
   background: var(--bg-clr-background);
   display: flex;
@@ -85,9 +87,10 @@ body {
   flex-direction: column;
 }
 
+/*Menu*/
 /*I used sticky to make the menu follow when you scroll.*/
 .menu {
-  padding: 0.2rem;
+  padding: 0.1rem;
   background: var(--bg-clr-menu);
   position: sticky;
   top: 0;
@@ -105,6 +108,14 @@ body {
   padding: 1rem;
 }
 
+.menu-btn {
+  display: none;
+}
+
+.menu-header {
+  display: none;
+}
+
 .links a:hover {
   text-decoration: underline;
 }
@@ -112,7 +123,6 @@ body {
 .menu a {
   font-size: 1rem;
   color: #111;
-  padding: 0.8rem 1rem;
 }
 
 /*Make the links to other pages turn red when hovering over.*/
@@ -120,11 +130,17 @@ body {
   background-color: red;
 }
 
+/*Header styling*/
 .header {
   background-color: var(--bg-clr-header);
-  padding: 1.5rem;
+  padding: 0.5%;
   text-align: center;
-  font-size: 3rem;
+}
+
+.header-caption {
+  font-size: clamp(1rem, 3rem + 1vw, 5rem);
+  width: 80%;
+  margin-left: 10%;
 }
 
 .second-header {
@@ -134,6 +150,7 @@ body {
   margin-left: 2%;
 }
 
+/*link styling*/
 .projectlink,
 .projecttext {
   font-weight: bold;
@@ -146,6 +163,11 @@ body {
   text-decoration: underline;
 }
 
+a {
+  text-decoration: none;
+}
+
+/*Text and picture styling*/
 .text {
   font-size: 1.5rem;
   margin-left: 5%;
@@ -158,10 +180,7 @@ body {
   border-radius: 10%;
 }
 
-a {
-  text-decoration: none;
-}
-
+/*Footer styling*/
 .footer {
   background: var(--bg-clr-menu);
 }
@@ -178,4 +197,51 @@ a {
 
 .nav-link:hover {
   text-decoration: underline;
+}
+
+/*Responsitivity*/
+@media (max-width: 1280px) {
+  /*Meny styling*/
+  .menu {
+    width: 15%;
+    padding: 0;
+  }
+
+  .links {
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu-btn {
+    display: none;
+    justify-content: center;
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+  }
+
+  .menu-btn:checked ~ .links {
+    display: flex;
+  }
+
+  /*Others*/
+  .earlier-projects {
+    width: 75%;
+    margin-left: 20%;
+  }
+
+  .me {
+    width: 75%;
+    margin-left: 20%;
+    margin-top: 0;
+  }
+
+  .header-caption {
+    font-size: clamp(1rem, 3rem + 1vw, 5rem);
+    width: 65%;
+    margin-left: 25%;
+  }
 }

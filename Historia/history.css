@@ -211,6 +211,9 @@ html {
 
 body {
   background: var(--bg-clr-edges);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /*Center the content and not have it go all the way to the edges.*/
@@ -246,6 +249,7 @@ body {
 
 .footer {
   background: var(--bg-clr-menu);
+  margin-top: auto;
 }
 
 /* image styling */
@@ -350,7 +354,7 @@ body {
 
 .header-caption {
   font-weight: var(--ft-weight-700);
-  font-size: var(--ft-size-header);
+  font-size: clamp(2rem, 2rem + 1vw, 4rem);
   color: var(--fg-clr-header-text);
 }
 

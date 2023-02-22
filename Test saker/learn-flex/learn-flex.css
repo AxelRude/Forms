@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-color: hotpink;
+}
+html {
+  font-size: 1.7rem;
+}
+
+.flex {
+  display: flex;
+  border: 20px solid limegreen;
+  justify-content: space-evenly;
+  gap: 2rem;
+  background: violet;
+}
+.box {
+  flex-basis: 200px;
+}
+.box:last-child {
+  background: yellow;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.box:first-child {
+  background: burlywood;
+}
+.box:nth-child(3) {
+  background: forestgreen;
+}
+.box:hover:not(:has(img)) {
+  scale: 1.5;
+}

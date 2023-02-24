@@ -18,6 +18,14 @@ html {
 .box {
   flex-basis: 200px;
 }
+p::before {
+  content: "Citat 2023, av Watermelvin:" open-quote;
+  font-size: x-small;
+}
+p::after {
+  content: close-quote;
+  font-size: x-small;
+}
 .box:last-child {
   background: yellow;
   display: flex;
@@ -29,9 +37,6 @@ html {
 .box:nth-child(3) {
   background: forestgreen;
 }
-.box:hover:not(:has(img)) {
+.box:hover > *:not(img) {
   scale: 1.5;
-}
-.box:hover:has(img) {
-  rotate: 180deg;
 }

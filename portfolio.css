@@ -5,6 +5,10 @@
   --bg-clr-edges: #e1ebdf;
   --bg-clr-shadow: #6c8368;
   --fg-clr-link: rgb(7, 78, 118);
+  --projectimg-height-after: 100%;
+  --projectimg-height-before: 50%;
+  --projectimg-width-after: 100%;
+  --projectimg-width-before: 50%;
 }
 
 * {
@@ -138,7 +142,7 @@ body {
 /*Header styling*/
 .header {
   background-color: var(--bg-clr-header);
-  padding: 0.5%;
+  padding: 0.1rem;
   text-align: center;
 }
 
@@ -180,8 +184,8 @@ a {
 }
 
 .projectpicture {
-  height: 100%;
-  width: 100%;
+  height: var(--projectimg-height-after);
+  width: var(--projectimg-width-after);
   border-radius: 10%;
 }
 
@@ -205,7 +209,7 @@ a {
 }
 
 /*Responsitivity*/
-@media (max-width: 1280px) {
+@media (min-width: 450px) and (max-width: 1280px) {
   /*Menu styling*/
   .menu {
     width: 15%;
@@ -249,5 +253,69 @@ a {
     font-size: clamp(1rem, 3rem + 1vw, 5rem);
     width: 65%;
     margin-left: 25%;
+  }
+}
+
+@media (max-width: 800px) {
+  /*menu styling:*/
+  .menu {
+    width: 25%;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: fixed;
+  }
+
+  .links {
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu-btn {
+    display: none;
+    justify-content: center;
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    font-size: 0.8rem;
+  }
+
+  .menu-btn:checked ~ .links {
+    display: flex;
+  }
+
+  /*Others*/
+  .earlier-projects {
+    width: 75%;
+    margin-left: 20%;
+  }
+
+  .me {
+    width: 75%;
+    margin-left: 20%;
+  }
+
+  .header-caption {
+    font-size: 1.5rem;
+    width: 65%;
+    margin-left: 25%;
+  }
+
+  .header {
+    padding: 0.03rem;
+  }
+
+  .text {
+    font-size: 0.6rem;
+  }
+
+  .description-link {
+    font-size: 1.2rem;
+  }
+
+  .second-header {
+    font-size: 1.5rem;
   }
 }

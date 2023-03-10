@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: #e1ebdf;
+}
+
+.header {
+  background: #2093d8;
+  padding: 0.1rem;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.item {
+  max-width: 100%;
+}
+
+.fruit {
+  width: 100%;
+  aspect-ratio: 1/ 1;
+  position: relative;
+  border: 1px solid #111;
+}
+
+@media (max-width: 400px) {
+  .header {
+    font-size: 1rem;
+  }
+}

@@ -134,3 +134,20 @@ CSS main
   font-size: 70%;
   grid-column: span 4;
 }
+
+/*Footer styling*/
+.footer-text {
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.footer {
+  background: #20bbd8;
+}
+.nav-link {
+  color: rgb(7, 78, 118);
+  text-decoration: none;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}

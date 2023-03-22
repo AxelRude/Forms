@@ -14,7 +14,7 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 5rem;
 }
 
 html {
@@ -27,11 +27,10 @@ body {
 }
 
 .main-content {
-  background: var(--bg-clr-edges);
   flex-direction: column;
 }
 
-/*Styling of first paragraph*/
+/*Styling of first paragraph (Description of me)*/
 .me {
   background: var(--bg-clr-background);
   width: 80%;
@@ -59,7 +58,7 @@ body {
   border-radius: 20%;
 }
 
-/*Main paragraphs*/
+/*Main paragraphs (earlier projects)*/
 .earlier-projects {
   background: var(--bg-clr-background);
   display: flex;
@@ -71,7 +70,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.part {
+.project-paragraph {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -83,13 +82,12 @@ body {
   box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
 }
 
-.project-part {
+.project-paragraph-content {
   display: grid;
   grid-template-columns: 70% auto;
   margin: 1.5rem;
   height: 4.5rem;
   overflow: hidden;
-  opacity: 0.2;
   transition: 0.2s ease-in-out;
 }
 
@@ -100,7 +98,7 @@ body {
 
 /*Menu*/
 /*I used sticky to make the menu follow when you scroll.*/
-.menu {
+.primary-nav {
   padding: 0.1rem;
   background: var(--bg-clr-menu);
   position: sticky;
@@ -114,6 +112,7 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-evenly;
+  flex-direction: row;
   list-style: none;
   background: var(--bg-clr-menu);
   height: 100%;
@@ -124,22 +123,13 @@ body {
   display: none;
 }
 
-.menu-header {
-  display: none;
-}
-
 .links a:hover {
   text-decoration: underline;
 }
 
-.menu a {
+.primary-nav a {
   font-size: 1rem;
   color: #111;
-}
-
-/*Make the links to other pages turn red when hovering over.*/
-.button:hover {
-  background-color: red;
 }
 
 /*Header styling*/
@@ -163,15 +153,15 @@ body {
 }
 
 /*link styling*/
-.projectlink,
-.projecttext {
+.project-link-header,
+.me-header {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
-.description-link:hover {
+.project-link:hover {
   text-decoration: underline;
 }
 
@@ -186,7 +176,7 @@ a {
   margin-right: 5%;
 }
 
-.projectpicture {
+.project-picture {
   height: var(--projectimg-height-before);
   width: var(--projectimg-width-before);
   border-radius: 10%;
@@ -204,67 +194,60 @@ a {
   font-weight: normal;
 }
 
-.nav-link {
+.footer-link {
   color: var(--fg-clr-link);
 }
 
-.nav-link:hover {
+.footer-link:hover {
   text-decoration: underline;
 }
 
 /*Responsitivity*/
 @media (min-width: 1280px) {
   /*Hover animations*/
-  .project-part:hover {
+  .project-paragraph-content:hover {
     height: 15rem;
-    opacity: 1;
   }
-  .project-part:hover .projectpicture {
+  .project-paragraph-content:hover .project-picture {
     height: var(--projectimg-height-after);
     width: var(--projectimg-width-after);
+  }
+  .earlier-projects:hover
+    .project-paragraph-content:not(.project-paragraph-content:hover) {
+    opacity: 0.2;
   }
 }
 @media (min-width: 450px) and (max-width: 1280px) {
   /*Menu styling*/
-  .menu {
-    width: 15%;
+  .primary-nav {
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    position: fixed;
+    position: sticky;
   }
   .links {
+    display: none;
+    position: relative;
     flex-direction: column;
-    display: none;
+    gap: 0.5rem;
+    z-index: 99;
   }
-  .menu-btn {
-    display: none;
-    justify-content: center;
+  .links.open {
+    display: flex;
   }
   .menu-header {
     display: flex;
-    justify-content: center;
     user-select: none;
   }
   .menu-btn-img {
     max-height: 2rem;
   }
-  .menu-btn:checked ~ .links {
+  .menu-btn {
     display: flex;
   }
 
   /*Text styling*/
-  .earlier-projects {
-    width: 75%;
-    margin-left: 20%;
-  }
-  .me {
-    width: 75%;
-    margin-left: 20%;
-  }
   .header-caption {
     font-size: clamp(1rem, 3rem + 1vw, 5rem);
-    width: 65%;
-    margin-left: 25%;
   }
   .header {
     padding: 0.03rem;
@@ -272,7 +255,7 @@ a {
   .text {
     font-size: 0.9rem;
   }
-  .description-link {
+  .project-link {
     font-size: 1.1rem;
   }
   .second-header {
@@ -280,11 +263,11 @@ a {
   }
 
   /*Paragraph styling*/
-  .project-part {
+  .project-paragraph-content {
     height: 100%;
     opacity: 1;
   }
-  .projectpicture {
+  .project-picture {
     height: 7rem;
     width: var(--projectimg-width-after);
   }
@@ -295,45 +278,35 @@ a {
 }
 @media (max-width: 450px) {
   /*menu styling*/
-  .menu {
-    width: 15%;
+  .primary-nav {
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    position: fixed;
+    position: sticky;
   }
   .links {
+    display: none;
+    position: relative;
     flex-direction: column;
-    display: none;
+    gap: 0.5rem;
+    z-index: 99;
   }
-  .menu-btn {
-    display: none;
-    justify-content: center;
+  .links.open {
+    display: flex;
   }
   .menu-header {
     display: flex;
-    justify-content: center;
     user-select: none;
   }
   .menu-btn-img {
     max-height: 2rem;
   }
-  .menu-btn:checked ~ .links {
+  .menu-btn {
     display: flex;
   }
 
   /*text styling*/
-  .earlier-projects {
-    width: 75%;
-    margin-left: 20%;
-  }
-  .me {
-    width: 75%;
-    margin-left: 20%;
-  }
   .header-caption {
     font-size: clamp(1rem, 3rem + 1vw, 5rem);
-    width: 65%;
-    margin-left: 25%;
   }
   .header {
     padding: 0.03rem;
@@ -341,7 +314,7 @@ a {
   .text {
     font-size: 0.6rem;
   }
-  .description-link {
+  .project-link {
     font-size: 1rem;
   }
   .second-header {
@@ -349,11 +322,11 @@ a {
   }
 
   /*Styling paragraphs*/
-  .project-part {
+  .project-paragraph-content {
     height: 100%;
     opacity: 1;
   }
-  .projectpicture {
+  .project-picture {
     height: 3rem;
     width: var(--projectimg-width-after);
   }

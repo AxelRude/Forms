@@ -6,52 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axels Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
+    <script src="/portfolio.js" defer></script>
   </head>
 
   <body>
     <header class="header">
       <h1 class="header-caption">Axels Portfolio</h1>
     </header>
-    <div class="whole">
-      <nav class="menu">
-        <input type="checkbox" id="menu-header" class="menu-btn" />
-        <label class="menu-header" for="menu-header">
+    <div>
+      <nav class="primary-nav">
+        <button class="menu-btn" id="nav-btn">
           <img
             class="menu-btn-img"
             src="/Images/Images for portfolio/Burgermenu.png"
             alt="menu button"
           />
-        </label>
+        </button>
         <ul class="links">
           <li>
-            <a href="#intro">Intro: </a>
+            <a href="#me">This is me</a>
           </li>
           <li>
-            <a href="#flexbox">Flex: </a>
+            <a href="#intro">Intro</a>
           </li>
           <li>
-            <a href="#position">Pos: </a>
+            <a href="#flexbox">Flexbox & DIV</a>
           </li>
           <li>
-            <a href="#animation">Anim: </a>
+            <a href="#position">Position</a>
           </li>
           <li>
-            <a href="#grid">Grid: </a>
+            <a href="#animation">Animation</a>
           </li>
           <li>
-            <a href="#history">His: </a>
+            <a href="#grid">Grid</a>
           </li>
           <li>
-            <a href="#calc">BMI-Calc: </a>
+            <a href="#history">History</a>
           </li>
           <li>
-            <a href="#auto">Auto:</a>
+            <a href="#calc">BMI-Calculator</a>
+          </li>
+          <li>
+            <a href="#auto">Autogrid</a>
           </li>
         </ul>
       </nav>
       <main class="main-content">
-        <section class="me">
-          <header class="projecttext">This is me:</header>
+        <section class="me" id="me">
+          <header class="me-header">This is me:</header>
           <div class="metext">
             <img
               class="mepic"
@@ -69,12 +72,12 @@
           <header class="second-header">
             <h2>Earlier projects:</h2>
           </header>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="intro" class="projectlink">
+                <header id="intro" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Uppgift1/index.html"
                     target="_blank"
                     >HTML and CSS intro
@@ -90,19 +93,19 @@
               </div>
               <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/Uppgift1bild.png"
                   alt="Picture of prject 1."
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="flexbox" class="projectlink">
+                <header id="flexbox" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Uppgift2/flexbox.html"
                     target="_blank"
                     >DIV and Flexbox</a
@@ -115,21 +118,21 @@
                   And the outcome looked like this:
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/Uppgift2bild.png"
                   alt="Picture of project 2."
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="position" class="projectlink">
+                <header id="position" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Uppgift3/postion.html"
                     target="_blank"
                     >Position
@@ -142,21 +145,21 @@
                   like this:
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/Uppgift3bild.png"
                   alt="Picture of project 3"
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="animation" class="projectlink">
+                <header id="animation" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Uppgift4/animation.html"
                     target="_blank"
                     >Animation
@@ -170,21 +173,21 @@
                   this:
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/Uppgift4bild.png"
                   alt="Picture of project 4"
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="grid" class="projectlink">
+                <header id="grid" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Uppgift5/grid.html"
                     target="_blank"
                     >Grid
@@ -197,88 +200,90 @@
                   up looking:
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/Uppgift5bild.png"
                   alt="Picture of project 5"
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="history" class="projectlink">
+                <header id="history" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Historia/history.html"
                     target="_blank"
                     >History and DOM
                   </a>
                 </header>
                 <p class="text">
-                  This is yet another project I have been working on. In this
-                  assignment i read up on the history of HTML and dom as well as
-                  Laws and regulations on websites. I made the website accesible
-                  to people who only used the keyboard, responsive based on what
-                  device was being used and I added a form to submit mail to me.
+                  This was the sixth project. In this assignment i read up on
+                  the history of HTML and dom as well as Laws and regulations on
+                  websites. I made the website accesible to people who only used
+                  the keyboard, responsive based on what device was being used
+                  and I added a form to submit mail to me.
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/historybild.png"
                   alt="Picture och the history project"
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="calc" class="projectlink">
+                <header id="calc" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/Miniräknare/calc.html"
                     target="_blank"
                     >BMI-Calculator
                   </a>
                 </header>
                 <p class="text">
-                  In this project I used Javascript for the first time. I
-                  created a calculator that could calculate a persons BMI.
+                  This was the seventh project. In this project I used
+                  Javascript for the first time. I created a calculator that
+                  could calculate a persons BMI.
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/calculatorbild.png"
                   alt="Picture of BMI-calculator"
                 />
               </div>
             </div>
           </section>
-          <section class="part">
-            <div class="project-part">
+          <section class="project-paragraph">
+            <div class="project-paragraph-content">
               <div class="project-description">
-                <header id="auto" class="projectlink">
+                <header id="auto" class="project-link-header">
                   <a
-                    class="description-link"
+                    class="project-link"
                     href="/autogrid/autogrid.html"
                     target="_blank"
                     >Auto-Grid</a
                   >
                 </header>
                 <p class="text">
-                  Here I experimented with using 'auto-fill' on grid. I used it
-                  to have the differnet pictures automatically change the amount
-                  of collums, so that they would not be to small
+                  This was the eigth project. Here I experimented with using
+                  'auto-fill' on grid. I used it to have the differnet pictures
+                  automatically change the amount of collums, so that they would
+                  not be to small
                 </p>
               </div>
-              <div class="project-description">
+              <div class="project-description-img">
                 <img
-                  class="projectpicture"
+                  class="project-picture"
                   src="/Images/Images for portfolio/autogrid.png"
                   alt="picture of autogrid assignment"
                 />
@@ -290,9 +295,9 @@
       <footer class="footer">
         <nav>
           <ul class="footer-navigation">
-            <li><a class="nav-link" href="#">Tillbaka till toppen</a></li>
+            <li><a class="footer-link" href="#">Tillbaka till toppen</a></li>
             <li>
-              <a class="nav-link" href="mailto:axel.rude@elev.ga.ntig.se"
+              <a class="footer-link" href="mailto:axel.rude@elev.ga.ntig.se"
                 >Kontakta mig</a
               >
             </li>

@@ -1,100 +1,116 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .parent {
-    position: relative;
-    text-align: center;
-    background-color: aqua; 
-    height: 350vh;
+  position: relative;
+  text-align: center;
+  background-color: aqua;
+  height: 350vh;
 }
 
 .heading {
-    background-color: gray;
-    padding: 4rem;
+  background-color: gray;
+  padding: 4rem;
 }
 
 .titel {
-    font-size: 10rem;
+  font-size: 10rem;
 }
 
 .circle {
-    font-size: 4rem;
-    text-align: left;
+  font-size: 4rem;
+  text-align: left;
 }
 
 /*I used transition to make the animation happen over time instead of directly and to make it go back when you move
 the mouse of the picture.*/
 .watermelvin {
-    height: 15rem;
-    width: 15rem;
-    transition: 5s ease-in-out;
-    border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  transition: 5s ease-in-out;
+  border-radius: 50%;
 }
 
 /*I used width make the picture wider and border-radius to make it into a square.*/
 .watermelvin:hover {
-    width: 100%;
-    border-radius: 0%;
+  width: 100%;
+  border-radius: 0%;
 }
 
 .square {
-    font-size: 4rem;
-    text-align: left;
-    margin-top: 10rem;
+  font-size: 4rem;
+  text-align: left;
+  margin-top: 10rem;
 }
 
 .fun {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .sled {
-    height: 15rem;
-    width: 15rem;
-    transition: 5s ease-in-out;
+  height: 15rem;
+  width: 15rem;
+  transition: 5s ease-in-out;
+}
+/*Footer styling*/
+.footer-text {
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.footer {
+  background: #20bbd8;
+}
+.nav-link {
+  color: rgb(7, 78, 118);
+  text-decoration: none;
+}
+.nav-link:hover {
+  text-decoration: underline;
 }
 
 /*All of these commands aren't supported so I had support them. I choosed to use scale and rotate because it is an easy way 
 to make the picture bigger and spin around. Translate I used to move it to the right*/
 @supports ((scale: 2) and (rotate: 1080deg) and (translate: 30rem)) {
-    .sled:hover {
-        scale: 2;
-        rotate: 1080deg;
-        border-radius: 50%;
-        translate: 30rem;
-    }
+  .sled:hover {
+    scale: 2;
+    rotate: 1080deg;
+    border-radius: 50%;
+    translate: 30rem;
+  }
 }
 
 .sliding {
-    font-size: 4rem;
-    text-align: left;
-    margin-top: 10%;
+  font-size: 4rem;
+  text-align: left;
+  margin-top: 10%;
 }
 
 .me {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mepic {
-    height: 20%;
-    width: 20%;
-    transition: 2s ease-in-out;
+  height: 20%;
+  width: 20%;
+  transition: 2s ease-in-out;
 }
 
 /*Translate -170% I used to move the picture to the left.*/
 @supports ((scale: 1.5) and (translate: -170% 5rem)) {
-.mepic:hover {
+  .mepic:hover {
     scale: 1.5;
     translate: -170% 5rem;
     border-radius: 25%;
-}
+  }
 }
 
 .video {
-    font-size: 4rem;
-    text-align: left;
-    margin-top: 10rem;
+  font-size: 4rem;
+  text-align: left;
+  margin-top: 10rem;
 }

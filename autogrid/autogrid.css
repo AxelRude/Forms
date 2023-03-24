@@ -16,6 +16,8 @@ body {
 
 .auto-grid {
   display: grid;
+  /*Försöker få plats med så många bilder som är större än 15 rem som möjligt. 
+  Om den skärmen blir mindre gör den bilderna mindre och mindre tills det inte längre får plats och man måste minska antalet rader.*/
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   width: 70%;
   margin-left: 15%;

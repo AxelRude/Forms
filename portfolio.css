@@ -26,10 +26,6 @@ body {
   background: var(--bg-clr-edges);
 }
 
-.main-content {
-  flex-direction: column;
-}
-
 /*Styling of first paragraph (Description of me)*/
 .me {
   background: var(--bg-clr-background);
@@ -43,7 +39,6 @@ body {
   margin-bottom: 3rem;
   margin-top: 1.5rem;
 }
-
 .metext {
   display: flex;
   align-items: center;
@@ -51,7 +46,6 @@ body {
   gap: 2rem;
   margin: 2rem;
 }
-
 .mepic {
   height: 30%;
   width: 30%;
@@ -69,7 +63,7 @@ body {
   box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
   margin-bottom: 1.5rem;
 }
-
+/*Gör att varje projektbeskrivning är i mitten och att de har en liten skugga så att de står ut.*/
 .project-paragraph {
   display: flex;
   align-items: center;
@@ -81,7 +75,8 @@ body {
   margin-top: 1rem;
   box-shadow: 0.5rem 0.5rem 1rem var(--bg-clr-shadow);
 }
-
+/*Gör projektbeskrivningar till en mindre höjd så att man kan se en liten bild, underrubriken samt första raden av beskrivningen.
+Samt att den har en transition vid animationen.*/
 .project-paragraph-content {
   display: grid;
   grid-template-columns: 70% auto;
@@ -90,14 +85,12 @@ body {
   overflow: hidden;
   transition: 0.2s ease-in-out;
 }
-
 .project-description {
   display: flex;
   flex-direction: column;
 }
 
 /*Menu*/
-/*I used sticky to make the menu follow when you scroll.*/
 .primary-nav {
   padding: 0.1rem;
   background: var(--bg-clr-menu);
@@ -107,7 +100,6 @@ body {
   font-weight: bold;
   z-index: 3;
 }
-
 .links {
   display: flex;
   flex: 1;
@@ -118,18 +110,27 @@ body {
   height: 100%;
   padding: 1rem;
 }
-
-.menu-btn {
+/*Gör att hamburgarmenyn inte syns på datorvyn:*/
+.burger-menu {
   display: none;
+  gap: 0.3rem;
+  background-color: var(--bg-clr-menu);
+  border: none;
 }
-
 .links a:hover {
   text-decoration: underline;
 }
-
 .primary-nav a {
   font-size: 1rem;
   color: #111;
+}
+/*Varje bar i hamburgarmenyn:*/
+.burger-bar {
+  height: 0.2rem;
+  width: 1.5rem;
+  background: #111;
+  position: relative;
+  border-radius: 20%;
 }
 
 /*Header styling*/
@@ -138,13 +139,11 @@ body {
   padding: 0.1rem;
   text-align: center;
 }
-
 .header-caption {
   font-size: clamp(1rem, 3rem + 1vw, 5rem);
   width: 80%;
   margin-left: 10%;
 }
-
 .second-header {
   color: rgb(0, 0, 0);
   font-size: 2rem;
@@ -160,11 +159,9 @@ body {
   text-align: center;
   margin-bottom: 0.5rem;
 }
-
 .project-link:hover {
   text-decoration: underline;
 }
-
 a {
   text-decoration: none;
 }
@@ -175,7 +172,6 @@ a {
   margin-left: 5%;
   margin-right: 5%;
 }
-
 .project-picture {
   height: var(--projectimg-height-before);
   width: var(--projectimg-width-before);
@@ -187,17 +183,14 @@ a {
 .footer {
   background: var(--bg-clr-menu);
 }
-
 .footer-text {
   padding: 0.2rem;
   font-size: 1rem;
   font-weight: normal;
 }
-
 .footer-link {
   color: var(--fg-clr-link);
 }
-
 .footer-link:hover {
   text-decoration: underline;
 }
@@ -205,16 +198,25 @@ a {
 /*Responsitivity*/
 @media (min-width: 1280px) {
   /*Hover animations*/
+  /*Gör att varje paragraph större så att man kan se hela texten.*/
   .project-paragraph-content:hover {
-    height: 15rem;
+    height: 19rem;
   }
   .project-paragraph-content:hover .project-picture {
     height: var(--projectimg-height-after);
     width: var(--projectimg-width-after);
   }
+  /*Gör att när man hovrar på dividern med alla tidigare project blir alla projekteskrivningar lite suddiga, 
+  förutom den projektbeskrivningen som man hovrar på.*/
   .earlier-projects:hover
     .project-paragraph-content:not(.project-paragraph-content:hover) {
-    opacity: 0.2;
+    opacity: 0.4;
+  }
+}
+/*För större skärmar behöver inte projekt beskrivningarna inte vara så höga för att se hela texten.*/
+@media (min-width: 1540px) {
+  .project-paragraph-content:hover {
+    height: 15rem;
   }
 }
 @media (min-width: 450px) and (max-width: 1280px) {
@@ -224,6 +226,7 @@ a {
     padding-top: 0.5rem;
     position: sticky;
   }
+  /*Koden som gör att listan med länkar är gömda by default.*/
   .links {
     display: none;
     position: relative;
@@ -231,18 +234,17 @@ a {
     gap: 0.5rem;
     z-index: 99;
   }
+  /*Koden som gör att listan syns när man klickar på hamburgarmenyn.*/
   .links.open {
     display: flex;
   }
-  .menu-header {
+  .burger-menu {
     display: flex;
-    user-select: none;
+    flex-direction: column;
   }
-  .menu-btn-img {
-    max-height: 2rem;
-  }
-  .menu-btn {
-    display: flex;
+  /*Gör att hamburgarmenyn syns på tabletvy*/
+  .burger-menu:hover {
+    border: 0.1rem solid #111;
   }
 
   /*Text styling*/
@@ -283,6 +285,7 @@ a {
     padding-top: 0.5rem;
     position: sticky;
   }
+  /*Koden som gör att listan med länkar är gömda by default.*/
   .links {
     display: none;
     position: relative;
@@ -290,18 +293,17 @@ a {
     gap: 0.5rem;
     z-index: 99;
   }
+  /*Koden som gör att listan syns när man klickar på hamburgarmenyn.*/
   .links.open {
     display: flex;
   }
-  .menu-header {
+  /*Gör att hamburgarmenyn syns på telefonvy*/
+  .burger-menu {
     display: flex;
-    user-select: none;
+    flex-direction: column;
   }
-  .menu-btn-img {
-    max-height: 2rem;
-  }
-  .menu-btn {
-    display: flex;
+  .burger-menu:hover {
+    border: 0.1rem solid #111;
   }
 
   /*text styling*/

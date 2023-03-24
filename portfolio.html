@@ -15,12 +15,11 @@
     </header>
     <div>
       <nav class="primary-nav">
-        <button class="menu-btn" id="nav-btn">
-          <img
-            class="menu-btn-img"
-            src="/Images/Images for portfolio/Burgermenu.png"
-            alt="menu button"
-          />
+        <!-- Hamburgarmeny: (span används för att div inte är ett tillåtet "child element" till "button")-->
+        <button class="burger-menu" id="nav-btn">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
         </button>
         <ul class="links">
           <li>
@@ -53,12 +52,15 @@
         </ul>
       </nav>
       <main class="main-content">
+        <!-- Första stycket, stycket som beskriver mig -->
         <section class="me" id="me">
-          <header class="me-header">This is me:</header>
+          <header class="me-header">
+            <h2>This is me:</h2>
+          </header>
           <div class="metext">
             <img
               class="mepic"
-              src="/Images/Images for portfolio/thisisme.png"
+              src="/Images/Images-for-portfolio/thisisme.png"
               alt="A picture of me(Axel Rude)"
             />
             <p class="text">
@@ -72,6 +74,7 @@
           <header class="second-header">
             <h2>Earlier projects:</h2>
           </header>
+          <!-- Varje section är ett stycke, och varje stycke är om olika projekt som jag gjort i kursen. -->
           <section class="project-paragraph">
             <div class="project-paragraph-content">
               <div class="project-description">
@@ -80,7 +83,8 @@
                     class="project-link"
                     href="/Uppgift1/index.html"
                     target="_blank"
-                    >HTML and CSS intro
+                  >
+                    <h4>HTML and CSS intro</h4>
                   </a>
                 </header>
                 <p class="text">
@@ -94,8 +98,8 @@
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/Uppgift1bild.png"
-                  alt="Picture of prject 1."
+                  src="/Images/Images-for-portfolio/Uppgift1bild.png"
+                  alt="Picture of project 1."
                 />
               </div>
             </div>
@@ -108,8 +112,9 @@
                     class="project-link"
                     href="/Uppgift2/flexbox.html"
                     target="_blank"
-                    >DIV and Flexbox</a
                   >
+                    <h4>DIV and Flexbox</h4>
+                  </a>
                 </header>
                 <p class="text">
                   This was the second project. This time I was familiar with
@@ -121,7 +126,7 @@
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/Uppgift2bild.png"
+                  src="/Images/Images-for-portfolio/Uppgift2bild.png"
                   alt="Picture of project 2."
                 />
               </div>
@@ -135,20 +140,21 @@
                     class="project-link"
                     href="/Uppgift3/postion.html"
                     target="_blank"
-                    >Position
+                  >
+                    <h4>Position</h4>
                   </a>
                 </header>
                 <p class="text">
                   This was the third project. This assignment was to get
-                  familiarized position. This went well and I also learned to
-                  use the css-properties sticky and fixed. The outcome looked
-                  like this:
+                  familiarized with using position. This went well and I also
+                  learned to use the css-properties sticky and fixed. The
+                  outcome looked like this:
                 </p>
               </div>
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/Uppgift3bild.png"
+                  src="/Images/Images-for-portfolio/Uppgift3bild.png"
                   alt="Picture of project 3"
                 />
               </div>
@@ -162,11 +168,12 @@
                     class="project-link"
                     href="/Uppgift4/animation.html"
                     target="_blank"
-                    >Animation
+                  >
+                    <h4>Animation</h4>
                   </a>
                 </header>
                 <p class="text">
-                  This was the fourth project. This time i learned to inbed
+                  This was the fourth project. This time i learned to add
                   animations into the css code. I also learned to add a youtube
                   video on the webpage that plays if you click on it and if you
                   want, you can view it in fullscreen. The outcome looked like
@@ -176,7 +183,7 @@
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/Uppgift4bild.png"
+                  src="/Images/Images-for-portfolio/Uppgift4bild.png"
                   alt="Picture of project 4"
                 />
               </div>
@@ -190,20 +197,21 @@
                     class="project-link"
                     href="/Uppgift5/grid.html"
                     target="_blank"
-                    >Grid
+                  >
+                    <h4>Grid</h4>
                   </a>
                 </header>
                 <p class="text">
                   This was the fifth project. Display: grid was what I was
                   learning about this time. I learned to change grid rows and
-                  grid columns aswell as the gaps inbetween. This how it ended
+                  grid columns as well as the gaps inbetween. This how it ended
                   up looking:
                 </p>
               </div>
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/Uppgift5bild.png"
+                  src="/Images/Images-for-portfolio/Uppgift5bild.png"
                   alt="Picture of project 5"
                 />
               </div>
@@ -217,7 +225,8 @@
                     class="project-link"
                     href="/Historia/history.html"
                     target="_blank"
-                    >History and DOM
+                  >
+                    <h4>History and DOM</h4>
                   </a>
                 </header>
                 <p class="text">
@@ -231,7 +240,7 @@
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/historybild.png"
+                  src="/Images/Images-for-portfolio/historybild.png"
                   alt="Picture och the history project"
                 />
               </div>
@@ -245,7 +254,8 @@
                     class="project-link"
                     href="/Miniräknare/calc.html"
                     target="_blank"
-                    >BMI-Calculator
+                  >
+                    <h4>BMI-Calculator</h4>
                   </a>
                 </header>
                 <p class="text">
@@ -257,7 +267,7 @@
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/calculatorbild.png"
+                  src="/Images/Images-for-portfolio/calculatorbild.png"
                   alt="Picture of BMI-calculator"
                 />
               </div>
@@ -271,8 +281,9 @@
                     class="project-link"
                     href="/autogrid/autogrid.html"
                     target="_blank"
-                    >Auto-Grid</a
                   >
+                    <h4>Auto-Grid</h4>
+                  </a>
                 </header>
                 <p class="text">
                   This was the eigth project. Here I experimented with using
@@ -284,7 +295,7 @@
               <div class="project-description-img">
                 <img
                   class="project-picture"
-                  src="/Images/Images for portfolio/autogrid.png"
+                  src="/Images/Images-for-portfolio/autogrid.png"
                   alt="picture of autogrid assignment"
                 />
               </div>

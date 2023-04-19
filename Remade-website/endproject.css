@@ -1,0 +1,44 @@
+:root {
+  --bg-clr-header: rgb(75, 75, 75);
+  --bg-clr-navbar: rgb(129, 129, 129);
+  --bg-clr-background: rgb(250, 255, 237);
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  scroll-padding-top: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-clr-background);
+}
+
+.main-header {
+  padding: 0.2rem;
+  background: var(--bg-clr-header);
+  text-align: center;
+}
+
+.header-caption {
+  font-size: clamp(1rem, 3rem + 1vw, 5rem);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  background: var(--bg-clr-navbar);
+  padding: 0.2rem;
+}
+
+.link {
+  font-size: 1.5rem;
+  color: #111;
+}

@@ -1,6 +1,7 @@
 const navButton = document.getElementById("nav-btn");
 const navBar = document.querySelector(".nav-links");
 const links = navBar.querySelectorAll("a");
+const primaryNav = document.querySelector(".primary-nav");
 
 document.addEventListener("click", () => {
   if (navBar.classList.contains("open")) {
@@ -18,4 +19,8 @@ links.forEach((link) => {
   link.addEventListener("click", () => {
     navBar.classList.toggle("open");
   });
+});
+
+window.addEventListener("scroll", () => {
+  primaryNav.classList.toggle("sticky", window.scrollY > 0);
 });

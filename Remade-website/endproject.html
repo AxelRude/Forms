@@ -16,13 +16,16 @@
           <span class="burger-bar"></span>
           <span class="burger-bar"></span>
         </button>
-        <h1 class="logo">
-          <img
-            class="logo-img"
-            src="/Images/pictures-end-project/Craigslist-Emblem.png"
-            alt="picture of craigslist logo"
-          />
-        </h1>
+        <div class="logo-language">
+          <h1 class="logo">
+            <img
+              class="logo-img"
+              src="/Images/pictures-end-project/Craigslist-Emblem.png"
+              alt="picture of craigslist logo"
+            />
+          </h1>
+          <p class="which-language">English</p>
+        </div>
         <ul class="nav-links">
           <li class="link">
             <a class="link-text" href="#for-sale">For sale</a>
@@ -42,12 +45,42 @@
           <li class="link">
             <a class="link-text" href="#popular">Popular</a>
           </li>
+          <li class="link-mobile">
+            <a class="link-text" href="#for-sale">Create posting </a>
+          </li>
+          <li class="link-mobile">
+            <a class="link-text" href="#for-sale">My posts</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main class="main-content">
-      <section class="right"></section>
+      <section class="right">
+        <section class="side-content">
+          <a class="side-link" href="">Create new posting</a>
+          <a class="side-link" href="">View my postings</a>
+        </section>
+      </section>
       <section class="center">
+        <section class="categories">
+          <header class="categories-header">
+            <h2>Reccomended posts</h2>
+          </header>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+            natus recusandae adipisci! Debitis praesentium quos, veniam dolorem
+            sunt tempore ducimus repellendus totam molestiae exercitationem?
+            Amet quaerat illo hic! Consequuntur eius nihil reprehenderit
+            similique accusamus blanditiis provident voluptate, dolorum, optio
+            quaerat deserunt repudiandae. Soluta debitis nemo quasi quos
+            exercitationem, veritatis expedita rerum nam quas quod, eaque ad
+            totam non quaerat facilis delectus, in inventore. Deserunt,
+            doloribus illo. Veritatis ducimus esse temporibus aspernatur sint ex
+            omnis corrupti soluta? Voluptatem tenetur fuga atque voluptas optio
+            maxime quibusdam itaque vel expedita quae pariatur maiores tempore,
+            amet doloribus dolores! Nulla corrupti beatae eos aliquam officia.
+          </p>
+        </section>
         <section class="categories" id="for-sale">
           <header class="categories-header">
             <h2>For sale</h2>
@@ -163,7 +196,18 @@
           </p>
         </section>
       </section>
-      <section class="left"></section>
+      <section class="left">
+        <section class="side-content">
+          <p class="side-text">Change language</p>
+          <form action="" class="change-language">
+            <select name="languages" id="languages" class="languages">
+              <option value="English" selected="seletced">English</option>
+              <option value="Swedish">Swedish</option>
+              <option value="German">German</option>
+            </select>
+          </form>
+        </section>
+      </section>
     </main>
   </body>
 </html>

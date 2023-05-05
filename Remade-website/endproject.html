@@ -56,30 +56,52 @@
     </header>
     <main class="main-content">
       <section class="right">
-        <section class="side-content">
-          <a class="side-link" href="">Create new posting</a>
-          <a class="side-link" href="">View my postings</a>
-        </section>
+        <div class="side-content">
+          <a class="side-link" href="/Remade-website/newposts.html"
+            >Create new posting</a
+          >
+          <a class="side-link" href="/Remade-website/myposts.html"
+            >View my postings</a
+          >
+        </div>
       </section>
       <section class="center">
         <section class="categories">
           <header class="categories-header">
             <h2>Reccomended posts</h2>
           </header>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
-            natus recusandae adipisci! Debitis praesentium quos, veniam dolorem
-            sunt tempore ducimus repellendus totam molestiae exercitationem?
-            Amet quaerat illo hic! Consequuntur eius nihil reprehenderit
-            similique accusamus blanditiis provident voluptate, dolorum, optio
-            quaerat deserunt repudiandae. Soluta debitis nemo quasi quos
-            exercitationem, veritatis expedita rerum nam quas quod, eaque ad
-            totam non quaerat facilis delectus, in inventore. Deserunt,
-            doloribus illo. Veritatis ducimus esse temporibus aspernatur sint ex
-            omnis corrupti soluta? Voluptatem tenetur fuga atque voluptas optio
-            maxime quibusdam itaque vel expedita quae pariatur maiores tempore,
-            amet doloribus dolores! Nulla corrupti beatae eos aliquam officia.
-          </p>
+          <section class="post-carousel">
+            <article class="reccomended-post">
+              <p class="post-title">Lawn mover</p>
+              <img
+                class="post-img"
+                src="/Images/pictures-end-project/lawn-mover.jpg"
+                alt="Lawn mover"
+              />
+              <p class="post-pricing">Price: $899.90</p>
+              <p class="post-location">Available in: New york</p>
+            </article>
+            <article class="reccomended-post">
+              <p class="post-title">Bird Cage</p>
+              <img
+                class="post-img"
+                src="/Images/pictures-end-project/bird-cage.jpg"
+                alt="Bird cage"
+              />
+              <p class="post-pricing">Price: $199.00</p>
+              <p class="post-location">Available in: Queens</p>
+            </article>
+            <article class="reccomended-post">
+              <p class="post-title">Shovel</p>
+              <img
+                class="post-img"
+                src="/Images/pictures-end-project/shovel.jpg"
+                alt="Shovel"
+              />
+              <p class="post-pricing">Price: $14.90</p>
+              <p class="post-location">Available in: Newark</p>
+            </article>
+          </section>
         </section>
         <section class="categories" id="for-sale">
           <header class="categories-header">
@@ -197,16 +219,16 @@
         </section>
       </section>
       <section class="left">
-        <section class="side-content">
+        <div class="side-content">
           <p class="side-text">Change language</p>
           <form action="" class="change-language">
             <select name="languages" id="languages" class="languages">
               <option value="English" selected="seletced">English</option>
-              <option value="Swedish">Swedish</option>
-              <option value="German">German</option>
+              <option value="Svenska">Swedish</option>
+              <option value="Deutsch">German</option>
             </select>
           </form>
-        </section>
+        </div>
       </section>
     </main>
   </body>

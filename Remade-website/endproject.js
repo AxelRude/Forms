@@ -33,6 +33,12 @@ window.addEventListener("scroll", () => {
 });
 
 languageChange.addEventListener("change", (e) => {
+  /*Detta är en proof of concept funktion för att "ändra språket". Jag valde att göra så att det står vilket språk 
+  man har valt istället för att ändra om hela sidan då det skulle mycket lång tid.
+  I HTML-filen har jag en form med en select i.
+  Denna har 3 olika alternativ för olika språk. Denna funktion körs när man ändrar vilket alternativ som är valt.*/
   const selectedLanguage = e.target.value;
+  //Denna variabel hämtas är det value som det valda alernativet har
   languageDisplay.innerText = selectedLanguage;
+  //Sedan ändras värdet på en textrad som finns i nav-baren till det value som det valda alernativet har
 });

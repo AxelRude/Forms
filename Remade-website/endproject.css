@@ -3,12 +3,17 @@
   --bg-clr-navbar: rgb(129, 129, 129);
   --bg-clr-background: rgb(250, 255, 237);
   --bg-clr-scrolled-navbar: rgb(200, 200, 200);
+  --bg-clr-side: rgb(250, 245, 237);
 }
 
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   scroll-padding-top: 5rem;
+}
+
+*:active > * {
+  outline: 1px dotted brown;
 }
 
 html {
@@ -68,6 +73,17 @@ body {
   color: #111;
   display: none;
 }
+.logo-language {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.which-language {
+  margin-bottom: 2%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: 0.6s;
+}
 
 /*Nav-bar när man har scrollat ner lite:*/
 .primary-nav.sticky {
@@ -82,6 +98,9 @@ body {
   /*Här använde jag height istället för min-height för att det bestämmer storleken på en bild och då konstigt annars.*/
   height: 3rem;
 }
+.primary-nav.sticky .which-language {
+  font-size: 1rem;
+}
 
 /*Main-content styling:*/
 .main-content {
@@ -89,7 +108,8 @@ body {
   grid-template-columns: 20% 60% 20%;
 }
 .right {
-  background: green;
+  outline: solid #111 0.2rem;
+  background: var(--bg-clr-side);
 }
 .center {
   width: 70%;
@@ -102,12 +122,24 @@ body {
   align-items: center;
   margin-bottom: 5rem;
 }
+.post-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.reccomended-post {
+  min-height: 8rem;
+  padding-inline: 0.5rem;
+  outline: solid #111 2px;
+}
 .categories p {
   font-size: larger;
   font-weight: 700;
 }
 .left {
-  background: green;
+  outline: solid #111 0.2rem;
+  background: var(--bg-clr-side);
 }
 
 /*Side-content styling:*/
@@ -142,6 +174,9 @@ body {
   height: 5rem;
   transition: all 0.6s ease;
 }
+.post-img {
+  height: 14rem;
+}
 
 /*Link styling:*/
 .link-text {
@@ -150,6 +185,23 @@ body {
 }
 .link-text:hover {
   text-decoration: underline;
+}
+
+/*Styling av extra sidor:*/
+/*mina annonser:*/
+.header-my-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.header-caption {
+  font-size: 5rem;
+  font-weight: 800;
+}
+.back {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 /*Responsitivity:*/

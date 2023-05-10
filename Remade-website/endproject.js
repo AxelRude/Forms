@@ -52,12 +52,11 @@ function slideShow() {
   //Hämtar de tre olika exempel-artiklarna från HTML-koden och ger de ett variabel namn "slides" och lägger in i en lista.
   let slides = document.querySelectorAll(".reccomended-post");
   /*Börjar med att sätta i till 0, ser så att i är mindre än 3 (antal exempel artiklar).
-  sedan sätts den första exempel artikeln till display none för att den inte ska synas. 
+  sedan tas klassnamnet "shown" bort från den första exempel artikeln för att den inte ska synas. 
   Därefeter ökar i med 1 och den sätter nästa exempel artikel till display none.
   Om i blir mer än antal exempel artiklar stängs loopen av och går vidare till nästa.*/
   for (i = 0; i < slides.length; i++) {
-    slides[i].classList.toggle = "hidden";
-    slides[i].style.display = "none";
+    slides[i].classList.remove("shown");
   }
   //Ökar variabeln slideIndex (hämtas längst upp) med ett
   slideIndex++;
@@ -65,8 +64,8 @@ function slideShow() {
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-  //Sätter den exempel artiklen som har indexet som är ett mindre än slideIndex till display block så att bara den syns.
-  slides[slideIndex - 1].style.display = "block";
+  //Sätter den exempel artiklen som har indexet som är ett mindre än slideIndex till klassnamn "shown" så att den syns.
+  slides[slideIndex - 1].classList.add("shown");
   //Startar om denna funktion en gång varje 4 sekunder.
-  setTimeout(slideShow, 4000);
+  setTimeout(slideShow, 2200);
 }

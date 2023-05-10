@@ -4,6 +4,10 @@ const links = navBar.querySelectorAll("a");
 const primaryNav = document.querySelector(".primary-nav");
 const languageDisplay = document.querySelector(".which-language");
 const languageChange = document.querySelector(".languages");
+/*För slide karusellen*/
+let slideIndex = 0;
+/*kör funktionen*/
+slideShow();
 
 navButton.addEventListener("click", (e) => {
   //Funktion för att få meny med länkar synas när man klickar på hamburgarmenyn.
@@ -42,3 +46,27 @@ languageChange.addEventListener("change", (e) => {
   languageDisplay.innerText = selectedLanguage;
   //Sedan ändras värdet på en textrad som finns i nav-baren till det value som det valda alernativet har
 });
+
+function slideShow() {
+  let i;
+  //Hämtar de tre olika exempel-artiklarna från HTML-koden och ger de ett variabel namn "slides" och lägger in i en lista.
+  let slides = document.querySelectorAll(".reccomended-post");
+  /*Börjar med att sätta i till 0, ser så att i är mindre än 3 (antal exempel artiklar).
+  sedan sätts den första exempel artikeln till display none för att den inte ska synas. 
+  Därefeter ökar i med 1 och den sätter nästa exempel artikel till display none.
+  Om i blir mer än antal exempel artiklar stängs loopen av och går vidare till nästa.*/
+  for (i = 0; i < slides.length; i++) {
+    slides[i].classList.toggle = "hidden";
+    slides[i].style.display = "none";
+  }
+  //Ökar variabeln slideIndex (hämtas längst upp) med ett
+  slideIndex++;
+  //Om slideIndex är större än antalet exempel artiklar sätts variabeln till 1.
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  //Sätter den exempel artiklen som har indexet som är ett mindre än slideIndex till display block så att bara den syns.
+  slides[slideIndex - 1].style.display = "block";
+  //Startar om denna funktion en gång varje 4 sekunder.
+  setTimeout(slideShow, 4000);
+}

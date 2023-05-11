@@ -4,6 +4,7 @@
   --bg-clr-background: rgb(250, 255, 237);
   --bg-clr-scrolled-navbar: rgb(200, 200, 200);
   --bg-clr-side: rgb(250, 245, 237);
+  --bg-clr-hero: rgb(167, 235, 254);
 }
 
 * {
@@ -29,9 +30,9 @@ body {
 .burger-menu {
   display: none;
   gap: 0.7rem;
-  background-color: var(--bg-clr-navbar);
   border: none;
   padding: 0.5rem;
+  transition: 0.6s;
 }
 .burger-bar {
   min-height: 0.3rem;
@@ -45,13 +46,12 @@ body {
 .primary-nav {
   z-index: 99;
   display: grid;
-  grid-template-columns: 15% 60%;
-  column-gap: 5%;
+  grid-template-columns: 15% 45%;
+  column-gap: 40%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--bg-clr-navbar);
   min-height: 3rem;
   transition: 0.6s;
 }
@@ -87,8 +87,8 @@ body {
 
 /*Nav-bar när man har scrollat ner lite:*/
 .primary-nav.sticky {
-  grid-template-columns: 15% 45%;
-  column-gap: 40%;
+  grid-template-columns: 15% 60%;
+  column-gap: 5%;
   background: var(--bg-clr-scrolled-navbar);
 }
 .primary-nav.sticky .nav-links {
@@ -100,6 +100,14 @@ body {
 }
 .primary-nav.sticky .which-language {
   font-size: 1rem;
+}
+
+/*Hero image styling:*/
+.hero-img-section {
+  display: flex;
+  justify-content: center;
+  min-height: 101vh;
+  background-color: var(--bg-clr-hero);
 }
 
 /*Main-content styling:*/
@@ -226,9 +234,13 @@ body {
 @media (max-width: 1280px) {
   /*Responsitivitet för både tablet och telefon:*/
   /*Styling för nav-bar*/
+  .logo-language {
+    display: none;
+  }
   .burger-menu {
     display: flex;
     flex-direction: column;
+    background: none;
   }
   .nav-links {
     display: none;
@@ -246,9 +258,16 @@ body {
   .link-mobile {
     display: contents;
   }
+  .primary-nav {
+    display: flex;
+    flex-direction: column;
+  }
   .primary-nav.sticky {
     background: var(--bg-clr-navbar);
     min-height: 3rem;
+  }
+  .primary-nav.sticky .burger-menu {
+    background: var(--bg-clr-navbar);
   }
 
   /*Styling main-content*/
@@ -257,5 +276,9 @@ body {
   }
   .side-content {
     display: none;
+  }
+  .right,
+  .left {
+    outline: none;
   }
 }

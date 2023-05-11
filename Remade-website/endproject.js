@@ -33,7 +33,7 @@ document.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
   //Funktion för att utföra animationerna på menyn när man scrollat ner lite på sidan.
-  primaryNav.classList.toggle("sticky", window.scrollY > 16);
+  primaryNav.classList.toggle("sticky", window.scrollY > 845);
 });
 
 languageChange.addEventListener("change", (e) => {

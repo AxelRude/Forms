@@ -125,11 +125,27 @@ body {
 .center {
   margin-top: 6rem;
 }
-.categories {
+.pop-up {
+  display: none;
+}
+.pop-up.open {
+  display: flex;
+  justify-content: center;
+  background: var(--bg-clr-scrolled-navbar);
+  min-height: 20rem;
+}
+.pop-up.open .pop-text {
+  font-size: 1.5rem;
+  color: var(--f-clr-text);
+}
+.categories-carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 4rem;
+}
+.categories {
+  display: none;
 }
 .categories-content {
   display: grid;
@@ -155,6 +171,44 @@ body {
 .left {
   outline: solid #111 0.2rem;
   background: var(--bg-clr-side);
+}
+
+/*Content:*/
+.for-sale.open {
+  display: flex;
+  background: var(--bg-clr-scrolled-navbar);
+  position: fixed;
+  top: 5.4rem;
+}
+.for-sale.scrolled {
+  top: 3.4rem;
+}
+.services.open {
+  display: flex;
+  background: var(--bg-clr-scrolled-navbar);
+  position: fixed;
+  top: 5.4rem;
+}
+.services.scrolled {
+  top: 3.4rem;
+}
+.housing.open {
+  display: flex;
+  background: var(--bg-clr-scrolled-navbar);
+  position: fixed;
+  top: 5.4rem;
+}
+.housing.scrolled {
+  top: 3.4rem;
+}
+.popular.open {
+  display: flex;
+  background: var(--bg-clr-scrolled-navbar);
+  position: fixed;
+  top: 5.4rem;
+}
+.popular.scrolled {
+  top: 3.4rem;
 }
 
 /*Styling av bild karusell:*/

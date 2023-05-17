@@ -8,6 +8,17 @@ const languageChange = document.querySelector(".languages");
 let slideIndex = 0;
 /*kör funktionen*/
 slideShow();
+const categoriesItem = document.querySelectorAll(".item");
+const popUp = document.querySelector(".pop-up");
+//variabler för main-content i navbar:
+const forSale = document.querySelector(".for-sale");
+const forSaleLink = document.querySelector(".link-for-sale");
+const services = document.querySelector(".services");
+const servicesLink = document.querySelector(".link-services");
+const housing = document.querySelector(".housing");
+const housingLink = document.querySelector(".link-housing");
+const popular = document.querySelector(".popular");
+const popularLink = document.querySelector(".link-popular");
 
 navButton.addEventListener("click", (e) => {
   //Funktion för att få meny med länkar synas när man klickar på hamburgarmenyn.
@@ -29,11 +40,15 @@ document.addEventListener("click", () => {
   if (navBar.classList.contains("open")) {
     navBar.classList.toggle("open");
   }
+  if (popUp.classList.contains("open")) {
+    popUp.classList.toggle("open");
+  }
 });
 
 window.addEventListener("scroll", () => {
   //Funktion för att utföra animationerna på menyn när man scrollat ner lite på sidan.
   primaryNav.classList.toggle("sticky", window.scrollY > 800);
+  forSale.classList.toggle("scrolled", window.scrollY > 800);
 });
 
 languageChange.addEventListener("change", (e) => {
@@ -69,3 +84,24 @@ function slideShow() {
   //Startar om denna funktion en gång varje 4 sekunder.
   setTimeout(slideShow, 2200);
 }
+
+forSaleLink.addEventListener("click", () => {
+  forSale.classList.toggle("open");
+});
+servicesLink.addEventListener("click", () => {
+  services.classList.toggle("open");
+});
+housingLink.addEventListener("click", () => {
+  housing.classList.toggle("open");
+});
+popularLink.addEventListener("click", () => {
+  popular.classList.toggle("open");
+});
+
+categoriesItem.forEach((item) => {
+  item.addEventListener("click", (a) => {
+    popUp.classList.toggle("open");
+    forSale.classList.toggle("open");
+    a.stopPropagation();
+  });
+});

@@ -315,11 +315,15 @@ body {
 }
 
 /*Styling av "new-posts"*/
+.main-new {
+  display: flex;
+  flex-direction: column;
+}
 .post-info {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-left: 25%;
+  width: 40%;
+  margin-left: 30%;
   text-align: center;
 }
 .new-post-form {
@@ -333,9 +337,31 @@ body {
 .vehicles-info.open {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-left: 25%;
+  width: 40%;
+  margin-left: 30%;
   text-align: center;
+}
+.label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+.option {
+  min-height: 1.5rem;
+}
+.desc {
+  resize: none;
+  min-height: 5rem;
+}
+.post-btn {
+  background: var(--bg-clr-btn);
+  color: #ffffff;
+  font-size: x-large;
+  padding: 0.3rem;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 3rem;
 }
 
 /*Responsitivity:*/

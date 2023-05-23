@@ -18,11 +18,11 @@
     <main class="main-new">
       <section class="post-info">
         <header class="new-header">
-          <h1 class="categories-header">Post information</h1>
+          <h2 class="categories-header">Post information</h2>
         </header>
         <form class="new-post-form" action="/Remade-website/myposts.html">
-          <label for="category">Category:</label>
-          <select name="category" id="category" class="category">
+          <label for="category" class="label">Category:</label>
+          <select name="category" id="category" class="category option">
             <option value="electronics" selected="seletced">Electronics</option>
             <option value="garden">Garden</option>
             <option value="furniture">furniture</option>
@@ -30,36 +30,39 @@
             <option value="music">Music</option>
             <option value="sports">Sports</option>
           </select>
-          <label for="title">Post title:</label>
-          <input type="text" name="p-title" id="p-title" />
-          <label for="title">Price:</label>
-          <input type="text" name="p-price" id="p-price" />
-          <label for="title">Location:</label>
-          <input type="text" name="p-loc" id="p-loc" />
-          <label for="desc">Description:</label>
-          <input type="text" name="p-desc" id="p-desc" />
+          <label for="title" class="label">Post title:</label>
+          <input type="text" name="p-title" id="p-title" class="option" />
+          <label for="price" class="label">Price:</label>
+          <input type="text" name="p-price" id="p-price" class="option" />
+          <label for="loc" class="label">Location:</label>
+          <input type="text" name="p-loc" id="p-loc" class="option" />
+          <label for="desc" class="label">Description:</label>
+          <textarea rows="5" class="desc"></textarea>
         </form>
       </section>
       <section class="vehicles-info">
         <header class="new-header">
-          <h1 class="categories-header">Vehicle information</h1>
+          <h2 class="categories-header">Vehicle information</h2>
         </header>
         <form class="new-post-form" action="/Remade-website/myposts.html">
-          <label for="gear">Gearbox:</label>
-          <select name="gear" id="gear" class="gear">
+          <label for="gear" class="label">Gearbox:</label>
+          <select name="gear" id="gear" class="gear option">
             <option value="manual" selected="seletced">Manual</option>
             <option value="automatic">Automatic</option>
           </select>
-          <label for="year">Model year:</label>
-          <input type="text" name="p-year" id="p-year" />
-          <label for="miles">Miles:</label>
-          <input type="text" name="p-miles" id="p-miles" />
-          <label for="fuel">Fuel:</label>
-          <input type="text" name="p-fuel" id="p-fuel" />
-          <label for="brand">Brand:</label>
-          <input type="text" name="p-brand" id="p-brand" />
+          <label for="year" class="label">Model year:</label>
+          <input type="text" name="p-year" id="p-year" class="option" />
+          <label for="miles" class="label">Miles:</label>
+          <input type="text" name="p-miles" id="p-miles" class="option" />
+          <label for="fuel" class="label">Fuel:</label>
+          <input type="text" name="p-fuel" id="p-fuel" class="option" />
+          <label for="brand" class="label">Brand:</label>
+          <input type="text" name="p-brand" id="p-brand" class="option" />
         </form>
       </section>
+      <button class="post-btn">
+        <p class="post-btn-text">Submit your post</p>
+      </button>
     </main>
   </body>
 </html>

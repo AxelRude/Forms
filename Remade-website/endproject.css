@@ -314,6 +314,30 @@ body {
   font-weight: 500;
 }
 
+/*Styling av "new-posts"*/
+.post-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.vehicles-info {
+  display: none;
+}
+.vehicles-info.open {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
 /*Responsitivity:*/
 @media (min-width: 450px) and (max-width: 1280px) {
   /*Responsitivitet för tablets*/

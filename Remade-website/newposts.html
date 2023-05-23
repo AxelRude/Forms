@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New posts</title>
     <link rel="stylesheet" href="endproject.css" />
+    <script src="/Remade-website/newposts.js" defer></script>
   </head>
   <body>
     <header class="header-my-posts">
@@ -15,12 +16,50 @@
       </a>
     </header>
     <main class="main-new">
-      <form class="new-post-form" action="/Remade-website/myposts.html">
-        <label for="title">Post title:</label>
-        <input type="text" name="p-title" id="p-title" />
-        <label for="img">Images:</label>
-        <input type="image" name="p-img" id="p-img" />
-      </form>
+      <section class="post-info">
+        <header class="new-header">
+          <h1 class="categories-header">Post information</h1>
+        </header>
+        <form class="new-post-form" action="/Remade-website/myposts.html">
+          <label for="category">Category:</label>
+          <select name="category" id="category" class="category">
+            <option value="electronics" selected="seletced">Electronics</option>
+            <option value="garden">Garden</option>
+            <option value="furniture">furniture</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="music">Music</option>
+            <option value="sports">Sports</option>
+          </select>
+          <label for="title">Post title:</label>
+          <input type="text" name="p-title" id="p-title" />
+          <label for="title">Price:</label>
+          <input type="text" name="p-price" id="p-price" />
+          <label for="title">Location:</label>
+          <input type="text" name="p-loc" id="p-loc" />
+          <label for="desc">Description:</label>
+          <input type="text" name="p-desc" id="p-desc" />
+        </form>
+      </section>
+      <section class="vehicles-info">
+        <header class="new-header">
+          <h1 class="categories-header">Vehicle information</h1>
+        </header>
+        <form class="new-post-form" action="/Remade-website/myposts.html">
+          <label for="gear">Gearbox:</label>
+          <select name="gear" id="gear" class="gear">
+            <option value="manual" selected="seletced">Manual</option>
+            <option value="automatic">Automatic</option>
+          </select>
+          <label for="year">Model year:</label>
+          <input type="text" name="p-year" id="p-year" />
+          <label for="miles">Miles:</label>
+          <input type="text" name="p-miles" id="p-miles" />
+          <label for="fuel">Fuel:</label>
+          <input type="text" name="p-fuel" id="p-fuel" />
+          <label for="brand">Brand:</label>
+          <input type="text" name="p-brand" id="p-brand" />
+        </form>
+      </section>
     </main>
   </body>
 </html>

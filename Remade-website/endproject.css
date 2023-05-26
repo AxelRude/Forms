@@ -50,8 +50,8 @@ body {
 .primary-nav {
   z-index: 99;
   display: grid;
-  grid-template-columns: 15% 45%;
-  column-gap: 40%;
+  grid-template-columns: 20% 45%;
+  column-gap: 35%;
   position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +68,7 @@ body {
   padding: 1.5rem;
   transition: 0.6s;
   white-space: nowrap;
+  margin: 0.5rem;
 }
 .link {
   font-size: 1.5rem;
@@ -86,6 +87,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: end;
+  margin: 0.5rem;
 }
 .which-language {
   margin-bottom: 2%;
@@ -117,6 +119,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--bg-clr-hero);
+  height: 100vh;
 }
 .hero-img {
   height: 100vh;
@@ -175,6 +178,17 @@ body {
   display: none;
 }
 .item {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  width: 50%;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  color: var(--f-clr-text);
+  background: var(--bg-clr-item);
+}
+.electronics {
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -324,6 +338,9 @@ body {
   flex-direction: column;
   width: 40%;
   margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 .new-post-form {
@@ -339,13 +356,23 @@ body {
   flex-direction: column;
   width: 40%;
   margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
+}
+.new-header-content {
+  font-size: 3rem;
+  text-shadow: 0.2rem 0.2rem 0.4rem #9a9a9a;
 }
 .label {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 1rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+input {
+  display: block;
 }
 .option {
   min-height: 1.5rem;
@@ -362,6 +389,60 @@ body {
   width: 20%;
   margin-left: 40%;
   margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.btn-text {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*Electronics styling:*/
+.electronics-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.electronics-header {
+  text-align: center;
+  padding: 3rem;
+  background: var(--bg-clr-scrolled-navbar);
+  border-bottom: 0.2rem solid #111;
+}
+.caption {
+  font-size: 5rem;
+  font-weight: 700;
+}
+.electronics-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  place-items: center;
+  gap: 3rem;
+  width: 90%;
+  margin: 5%;
+}
+.electronics-post {
+  padding-inline: 0.5rem;
+  outline: solid #111 2px;
+  transition: 0.8s;
+}
+.electronics-img {
+  height: 25rem;
+}
+
+/*Footer styling:*/
+.footer {
+  background: var(--bg-clr-hero);
+}
+.footer-text {
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.footer-link {
+  color: var(--fg-clr-link);
+}
+.footer-link:hover {
+  text-decoration: underline;
 }
 
 /*Responsitivity:*/
@@ -395,6 +476,30 @@ body {
   .pop-up-btn {
     font-size: medium;
   }
+
+  .post-info,
+  .vehicles-info.open {
+    width: 55%;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    padding-inline: 2rem;
+  }
+  .new-header-content {
+    font-size: 2.2rem;
+  }
+  .post-btn {
+    font-size: large;
+  }
+
+  .electronics-content {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+  .electronics-img {
+    height: 18rem;
+  }
+  .caption {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -426,6 +531,31 @@ body {
   }
   .pop-up-btn {
     font-size: smaller;
+  }
+
+  .post-info,
+  .vehicles-info.open {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+  }
+  .new-header-content {
+    font-size: 1.5rem;
+  }
+  .post-btn {
+    font-size: small;
+  }
+
+  .electronics-content {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    width: 100%;
+    margin-left: 0;
+  }
+  .electronics-img {
+    height: 12rem;
+  }
+  .caption {
+    font-size: 2.2rem;
   }
 }
 

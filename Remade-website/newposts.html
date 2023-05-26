@@ -9,16 +9,11 @@
     <script src="/Remade-website/newposts.js" defer></script>
   </head>
   <body>
-    <header class="header-my-posts">
-      <h1 class="header-caption">Create new post</h1>
-      <a class="back" href="/Remade-website/endproject.html">
-        Back to main-page
-      </a>
     </header>
     <main class="main-new">
       <section class="post-info">
         <header class="new-header">
-          <h2 class="categories-header">Post information</h2>
+          <h2 class="new-header-content">Post information</h2>
         </header>
         <form class="new-post-form" action="/Remade-website/myposts.html">
           <label for="category" class="label">Category:</label>
@@ -42,7 +37,7 @@
       </section>
       <section class="vehicles-info">
         <header class="new-header">
-          <h2 class="categories-header">Vehicle information</h2>
+          <h2 class="new-header-content">Vehicle information</h2>
         </header>
         <form class="new-post-form" action="/Remade-website/myposts.html">
           <label for="gear" class="label">Gearbox:</label>
@@ -63,6 +58,14 @@
       <button class="post-btn">
         <p class="post-btn-text">Submit your post</p>
       </button>
+      <section class="pop-up">
+        <p class="pop-text">
+          Thank you for submitting your post.
+        </p>
+        <button class="pop-up-btn">
+          <a class="btn-text" href="/Remade-website/endproject.html">Return</a>
+        </button>
+      </section>
     </main>
   </body>
 </html>

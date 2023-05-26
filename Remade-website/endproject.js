@@ -89,72 +89,45 @@ function slideShow() {
   setTimeout(slideShow, 2200);
 }
 
+function closeAllLinks(currentElement) {
+  //Hämtar alla stora menyer och lägger i en array
+  const megaMenus = [forSale, housing, popular, services];
+  //Kollar om den Delen som man klickar på är öppen och om den inte är det läggs det in  en variabel.
+  const shouldOpen = !currentElement.classList.contains("open");
+  //Loopar igenom för att se om det är någon meny som är öppen och om så är fallet stängs den.
+  for (const link of megaMenus) {
+    if (link.classList.contains("open")) {
+      link.classList.toggle("open");
+    }
+  }
+  //Öppnar/stänger den meny som klickas på.
+  if (shouldOpen) {
+    currentElement.classList.toggle("open");
+  }
+}
+
 //Funktioner för att ta fram de olika kategorierna när man klickar i nav-baren
 forSaleLink.addEventListener("click", () => {
-  forSale.classList.toggle("open");
-  if (services.classList.contains("open")) {
-    services.classList.toggle("open");
-  }
-  if (housing.classList.contains("open")) {
-    housing.classList.toggle("open");
-  }
-  if (popular.classList.contains("open")) {
-    popular.classList.toggle("open");
-  }
+  closeAllLinks(forSale);
 });
+
 servicesLink.addEventListener("click", () => {
-  services.classList.toggle("open");
-  if (forSale.classList.contains("open")) {
-    forSale.classList.toggle("open");
-  }
-  if (housing.classList.contains("open")) {
-    housing.classList.toggle("open");
-  }
-  if (popular.classList.contains("open")) {
-    popular.classList.toggle("open");
-  }
+  closeAllLinks(services);
 });
+
 housingLink.addEventListener("click", () => {
-  housing.classList.toggle("open");
-  if (forSale.classList.contains("open")) {
-    forSale.classList.toggle("open");
-  }
-  if (services.classList.contains("open")) {
-    services.classList.toggle("open");
-  }
-  if (popular.classList.contains("open")) {
-    popular.classList.toggle("open");
-  }
+  closeAllLinks(housing);
 });
 popularLink.addEventListener("click", () => {
-  popular.classList.toggle("open");
-  if (forSale.classList.contains("open")) {
-    forSale.classList.toggle("open");
-  }
-  if (services.classList.contains("open")) {
-    services.classList.toggle("open");
-  }
-  if (housing.classList.contains("open")) {
-    housing.classList.toggle("open");
-  }
+  closeAllLinks(popular);
 });
+
 //Funktion för att ta bort listan med alla olika kategorier när man klickar på en av de.
 //Samt tar upp pop up rutan som säger att det inte finns några tillgängliga annonser + sätter fokus på den,
 categoriesItem.forEach((item) => {
   item.addEventListener("click", (a) => {
-    popUp.classList.toggle("open");
+    closeAllLinks(popUp);
     popUpBtn.focus();
-    if (forSale.classList.contains("open")) {
-      forSale.classList.toggle("open");
-    }
-    if (services.classList.contains("open")) {
-      services.classList.toggle("open");
-    }
-    if (housing.classList.contains("open")) {
-      housing.classList.toggle("open");
-    }
-    housing.classList.remove("open");
-    popular.classList.remove("open");
     a.stopPropagation();
   });
 });

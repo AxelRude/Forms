@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="endproject.css" />
     <script src="/Remade-website/newposts.js" defer></script>
   </head>
-  <body>
+  <body class="body-new">
+    <header>
+      <nav class="primary-nav-extra">
+        <div class="logo-language-extra">
+          <h1 class="logo">
+            <img
+              class="logo-img"
+              src="/Images/pictures-end-project/Craigslist-Emblem.png"
+              alt="picture of craigslist logo"
+            />
+          </h1>
+        </div>
+        <a class="nav-links-extra" href="/Remade-website/endproject.html">
+          Return
+        </a>
+      </nav>
     </header>
     <main class="main-new">
       <section class="post-info">
@@ -17,7 +32,7 @@
         </header>
         <form class="new-post-form" action="/Remade-website/myposts.html">
           <label for="category" class="label">Category:</label>
-          <select name="category" id="category" class="category option">
+          <select id="category" class="category option">
             <option value="electronics" selected="seletced">Electronics</option>
             <option value="garden">Garden</option>
             <option value="furniture">furniture</option>
@@ -26,13 +41,13 @@
             <option value="sports">Sports</option>
           </select>
           <label for="title" class="label">Post title:</label>
-          <input type="text" name="p-title" id="p-title" class="option" />
+          <input type="text" id="title" class="option" />
           <label for="price" class="label">Price:</label>
-          <input type="text" name="p-price" id="p-price" class="option" />
+          <input type="text" id="price" class="option" />
           <label for="loc" class="label">Location:</label>
-          <input type="text" name="p-loc" id="p-loc" class="option" />
+          <input type="text" id="loc" class="option" />
           <label for="desc" class="label">Description:</label>
-          <textarea rows="5" class="desc"></textarea>
+          <textarea rows="5" class="desc" id="desc"></textarea>
         </form>
       </section>
       <section class="vehicles-info">
@@ -46,26 +61,45 @@
             <option value="automatic">Automatic</option>
           </select>
           <label for="year" class="label">Model year:</label>
-          <input type="text" name="p-year" id="p-year" class="option" />
+          <input type="text" id="year" class="option" />
           <label for="miles" class="label">Miles:</label>
-          <input type="text" name="p-miles" id="p-miles" class="option" />
+          <input type="text" id="miles" class="option" />
           <label for="fuel" class="label">Fuel:</label>
-          <input type="text" name="p-fuel" id="p-fuel" class="option" />
+          <input type="text" id="fuel" class="option" />
           <label for="brand" class="label">Brand:</label>
-          <input type="text" name="p-brand" id="p-brand" class="option" />
+          <input type="text" id="brand" class="option" />
         </form>
       </section>
       <button class="post-btn">
         <p class="post-btn-text">Submit your post</p>
       </button>
       <section class="pop-up">
-        <p class="pop-text">
-          Thank you for submitting your post.
-        </p>
+        <p class="pop-text">Thank you for submitting your post.</p>
         <button class="pop-up-btn">
           <a class="btn-text" href="/Remade-website/endproject.html">Return</a>
         </button>
       </section>
     </main>
+    <footer class="footer">
+      <nav>
+        <ul class="footer-navigation">
+          <li>
+            <a class="footer-link" href="/Remade-website/endproject.html"
+              >Return to main-page
+            </a>
+          </li>
+          <li>
+            <a class="footer-link" href="mailto:axel.rude@elev.ga.ntig.se"
+              >Contact me
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h5 class="footer-text">
+          Copyright &copy; 2023 - Axel Rude/A&M-Klubben
+        </h5>
+      </section>
+    </footer>
   </body>
 </html>

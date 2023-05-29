@@ -41,6 +41,23 @@ body {
   border-radius: 30%;
 }
 
+/*Skip to main-content*/
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  text-align: center;
+  height: 1.9rem;
+  background-color: var(--bg-clr-header);
+  translate: 0 -100%;
+  transition: translate 150ms ease-in-out;
+  text-decoration: none;
+}
+.skip-link:focus {
+  translate: 0;
+  color: var(--fg-clr-header-text);
+}
+
 /*Styling av nav-baren:*/
 .primary-nav {
   z-index: 99;
